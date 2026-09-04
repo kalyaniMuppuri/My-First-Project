@@ -1,0 +1,175 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+body{
+    background-color:#bdbdbb;
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+    min-height: 100vh; 
+}
+h1{
+    text-align: center;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width:400px;
+   background-color:white;
+     padding:40px;
+    border-radius:20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+input{
+    height: 25px;
+    width:250px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color:white;
+    border: 2px solid #333;/*input box*/
+}
+.btn{
+    text-align: center;
+    height:35px;
+    width: 150px;
+    background-color: rgb(35,113, 181);
+    padding:5px;
+    border-radius: 20px;
+    margin-top: 10px;
+    color:white;
+    border:none;
+    cursor: pointer;
+    transition:0.5s;
+    margin-left: 75px;
+    
+}
+.btn:hover{
+    transform: scale(1.1);
+    border:1px solid rgb(192, 220, 255);        
+}
+.logo{
+  width:150px;
+  height:auto;
+   display:block;
+   align-items:center;
+   margin-top:30px;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+
+}
+
+.container {
+  padding: 30px;
+  text-align: center;
+    width: 100%;
+}
+
+.title {
+  color: #e63946;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+    display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.food-card {
+  width: 230px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.food-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.food-card h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.category {
+  color: #666;
+}
+
+.price {
+  color: #e63946;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.order-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background-color: #b91c1c;
+}
