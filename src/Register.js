@@ -60,7 +60,7 @@ if(
       setSuccess("Registration successful!");
       
       // 3. Redirect directly to the home page
-      navigate("/"); 
+      navigate("/Home"); 
 
     } catch (err) {
       // Display the specific error thrown by your authService (e.g., "Account already exists")
