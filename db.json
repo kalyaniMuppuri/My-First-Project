@@ -1,17 +1,24 @@
 {
-    "users":[
-        {
-            "id":1,
-            "name":"ALGO FOODS",
-            "email":"admin@algofoods.com",
-            "password":"algo123",
-            "confirmPassword":"algo123"
-        }
-    ],
-
+  "users": [
+    {
+      "id": "yUgKeVNo_GM"
+    },
+    {
+      "username": "harsha",
+      "email": "harshamodina@gmail.com",
+      "password": "123456",
+      "id": "ZeBjPjJ4l_4"
+    },
+    {
+      "username": "kalyani",
+      "email": "xyz@gmail.com",
+      "password": "1234567",
+      "id": "z06aQIyNLM4"
+    }
+  ],
   "foods": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Chicken Biryani",
       "description": "Spicy chicken biryani with basmati rice",
       "category": "Lunch",
@@ -22,7 +29,7 @@
       "image": "/Images/Chicken-biryani.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Chicken 65",
       "description": "Crispy and spicy chicken pieces",
       "category": "Snacks",
@@ -33,7 +40,7 @@
       "image": "/Images/Chicken-65.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Chicken Fried Rice",
       "description": "Fried rice with chicken and vegetables",
       "category": "Dinner",
@@ -44,7 +51,7 @@
       "image": "/Images/Chicken-fried-rice.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Paneer Biryani",
       "description": "Delicious biryani with soft paneer",
       "category": "Lunch",
@@ -55,7 +62,7 @@
       "image": "/Images/paneer-biryani.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Masala Dosa",
       "description": "Crispy dosa with potato masala",
       "category": "Breakfast",
@@ -66,7 +73,7 @@
       "image": "/Images/masala-dosa.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Veg Fried Rice",
       "description": "Fried rice with fresh vegetables",
       "category": "Dinner",
@@ -77,18 +84,18 @@
       "image": "/Images/veg-fried-rice.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "French Fries",
       "description": "Crispy golden potato fries",
       "category": "Snacks",
       "type": "Veg",
       "price": 90,
-      "rating": 4.0,
+      "rating": 4,
       "availability": true,
       "image": "/Images/french-fries.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Gulab Jamun",
       "description": "Soft sweet dumplings in sugar syrup",
       "category": "Desserts",
@@ -99,7 +106,7 @@
       "image": "/Images/gulab-jamun.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Mango Juice",
       "description": "Fresh mango fruit juice",
       "category": "Beverages",
@@ -109,6 +116,6 @@
       "availability": true,
       "image": "/Images/mango-juice.jpg"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
-
