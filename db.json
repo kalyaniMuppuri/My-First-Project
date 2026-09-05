@@ -4,12 +4,10 @@
             "id":1,
             "name":"ALGO FOODS",
             "email":"admin@algofoods.com",
-            "password":"algo123",
-            "confirmPassword":"algo123"
+            "password":"algo123"
         }
-    ],
-
-  "foods": [
+      ],
+"foods": [
     {
       "id": 1,
       "name": "Chicken Biryani",
