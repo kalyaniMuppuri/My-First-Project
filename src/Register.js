@@ -2,6 +2,8 @@ import logo from "./logo.png";
 import { useState } from "react";
 import {Link,useNavigate} from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import axios from 'axios';
+import { registerUser } from "./AuthSerrvices";
 function Register(){
 const[data,setData]=useState({
     username:"",
@@ -12,7 +14,7 @@ const[data,setData]=useState({
 })
 const[error,setError]=useState("");
 const[success,setSuccess]=useState("");
-const Navigate=useNavigate();
+const navigate=useNavigate();
 
 
 
@@ -20,7 +22,7 @@ const{username,email,password,confirmPassword}=data;
 const changeHandler=e=>{
     setData({...data,[e.target.name]:e.target.value})
 }
-const submitHandler=(e)=>{
+const submitHandler=async (e)=>{
     e.preventDefault();
     setError("")
     setSuccess("")
@@ -46,7 +48,24 @@ if(
             return;
         }
         setSuccess("Registration successful");
-        Navigate("/Login");
+        
+
+        try {
+      // 1. Call your auth service instead of writing Axios logic here
+      const newUser = await registerUser({ username, email, password });
+
+      // 2. Save credentials to localStorage for instant login
+      localStorage.setItem("currentUser", JSON.stringify(newUser));
+
+      setSuccess("Registration successful!");
+      
+      // 3. Redirect directly to the home page
+      navigate("/"); 
+
+    } catch (err) {
+      // Display the specific error thrown by your authService (e.g., "Account already exists")
+      setError(err.message || "Something went wrong during registration.");
+    }
         
     
        
