@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "./logo.png"
+import logo from "./logo.png";
+
+
+
 
 function Login() {
   const [data, setData] = useState({
@@ -8,7 +11,8 @@ function Login() {
     email: "",
     password: ""
   });
-  
+    const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
   const { username, email, password } = data;
 
@@ -16,12 +20,29 @@ function Login() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async(e) => {
     e.preventDefault();
-    navigate("/Home");
-  };
+    localStorage.setItem("tempUser",JSON.stringify(data));
+     setError("");
+    setSuccess("");
 
-  return (
+    if (username === "" || email === "" || password === "" ) {
+      setError("Please fill all the fields");
+      return;
+    }
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters");
+      return;
+    }
+    if (!email.includes("@") || !email.includes(".")) {
+      setError("Please enter a valid email");
+      return;
+    }
+   setSuccess("login details saved, go to Register");
+   navigate("/register",{state:data});
+};
+    
+ return (
     <div className="Twoside">
       <div className="leftside">
         <div className="SubmissionForm">
@@ -55,7 +76,9 @@ function Login() {
             </button>
           </form>
           
-          <p>Don't have an account? <Link to="/register">Register</Link></p>
+          <p>login done? please complete the registration  <Link to="/register">Register</Link></p>
+          {error && <p style={{ color: "red", fontSize: "16px" }}>{error}</p>}
+          {success && <p style={{ color: "darkgreen", fontSize: "16px" }}>{success}</p>}
         </div>
       </div>
 

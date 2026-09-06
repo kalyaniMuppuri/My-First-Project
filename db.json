@@ -1,13 +1,13 @@
 {
-    "users":[
-        {
-            "id":1,
-            "name":"ALGO FOODS",
-            "email":"admin@algofoods.com",
-            "password":"algo123"
-        }
-      ],
-"foods": [
+  "users": [
+    {
+      "username": "kalyani",
+      "email": "kalyani@gmail.com",
+      "password": "123456",
+      "id": "wyIqblJwMkA"
+    }
+  ],
+  "foods": [
     {
       "id": "1",
       "name": "Chicken Biryani",
@@ -108,5 +108,4 @@
       "image": "/Images/mango-juice.jpg"
     }
   ]
-  
 }

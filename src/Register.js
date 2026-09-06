@@ -23,6 +23,8 @@ function Register() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+
+   
     setError("");
     setSuccess("");
 
@@ -43,16 +45,15 @@ function Register() {
       return;
     }
 
-    try {
-      const newUser = await registerUser({ username, email, password });
-      localStorage.setItem("currentUser", JSON.stringify(newUser));
-      setSuccess("Registration successful!");
-      navigate("/Home"); 
-    } catch (err) {
-      setError(err.message || "Something went wrong during registration.");
-    }
+   try{
+    const newUser=await registerUser({username,email,password});
+    localStorage.setItem("currentUser",JSON.stringify(newUser));
+    setSuccess("Registration successful");
+    navigate("/home")
+   }catch(err){
+    setError(err.message || "Registration failed")
+   }
   };
-
   return (
     <div className="Twoside">
       <div className="leftside">
@@ -95,7 +96,7 @@ function Register() {
             </button>
           </form>
           
-          <p>Already have an account? <Link to="/login">Login</Link></p>
+          <p>Registration done? go to home<Link to="/home">Home</Link></p>
           
           {error && <p style={{ color: "red", fontSize: "16px" }}>{error}</p>}
           {success && <p style={{ color: "darkgreen", fontSize: "16px" }}>{success}</p>}
