@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.Twoside {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.leftside {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.rightside {
+  flex: 1.2;
+  background-color: #8B9A6E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-container {
+  padding: 40px;
+  text-align: center;
+}
+.side-logo {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.SubmissionForm {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.SubmissionForm input {
+  width: 100% !important;
+  height: auto !important;
+  padding: 14px 16px !important;
+  border: 1.5px solid #333333 !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.SubmissionForm input:focus {
+  border-color: #8B9A6E !important;
+}
+
+.authbutton {
+  background-color: #8B9A6E;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.authbutton:hover {
+  opacity: 0.9;
+}
+
+.SubmissionForm p {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #333;
+}
+
+.SubmissionForm a {
+  color: #8B9A6E;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
 }

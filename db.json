@@ -1,22 +1,13 @@
 {
-  "users": [
-    {
-      "id": "yUgKeVNo_GM"
-    },
-    {
-      "username": "harsha",
-      "email": "harshamodina@gmail.com",
-      "password": "123456",
-      "id": "ZeBjPjJ4l_4"
-    },
-    {
-      "username": "kalyani",
-      "email": "xyz@gmail.com",
-      "password": "1234567",
-      "id": "z06aQIyNLM4"
-    }
-  ],
-  "foods": [
+    "users":[
+        {
+            "id":1,
+            "name":"ALGO FOODS",
+            "email":"admin@algofoods.com",
+            "password":"algo123"
+        }
+      ],
+"foods": [
     {
       "id": "1",
       "name": "Chicken Biryani",
@@ -116,6 +107,6 @@
       "availability": true,
       "image": "/Images/mango-juice.jpg"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
+  
 }

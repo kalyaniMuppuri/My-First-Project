@@ -1,126 +1,114 @@
-import logo from "./logo.png";
 import { useState } from "react";
-import {Link,useNavigate} from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import axios from 'axios';
+import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "./AuthSerrvices";
-function Register(){
-const[data,setData]=useState({
-    username:"",
-    email:"",
-    password:"",
-    confirmPassword:""
-    
-})
-const[error,setError]=useState("");
-const[success,setSuccess]=useState("");
-const navigate=useNavigate();
+import logo from "./logo.png" 
 
+function Register() {
+  const [data, setData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
 
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const navigate = useNavigate();
 
-const{username,email,password,confirmPassword}=data;
-const changeHandler=e=>{
-    setData({...data,[e.target.name]:e.target.value})
-}
-const submitHandler=async (e)=>{
+  const { username, email, password, confirmPassword } = data;
+
+  const changeHandler = e => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const submitHandler = async (e) => {
     e.preventDefault();
-    setError("")
-    setSuccess("")
-  
-    
+    setError("");
+    setSuccess("");
 
-if(
-    username===""|| email==="" || password==="" || confirmPassword==="")
-        {
-           setError("please fill the all fields");
-            return;
-        }
-         if(password!==confirmPassword){
-            setError("password and confirmPassword should match");
-            return;
-        }
-        if(password.length<6){
-            setError("password must be at least 6 characters");
-            return;
-        }
-        if(!email.includes("@") || !email.includes(".")){
-            setError("please enter the valid email");
-            return;
-        }
-        setSuccess("Registration successful");
-        
+    if (username === "" || email === "" || password === "" || confirmPassword === "") {
+      setError("Please fill all the fields");
+      return;
+    }
+    if (password !== confirmPassword) {
+      setError("Password and Confirm Password should match");
+      return;
+    }
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters");
+      return;
+    }
+    if (!email.includes("@") || !email.includes(".")) {
+      setError("Please enter a valid email");
+      return;
+    }
 
-        try {
-      // 1. Call your auth service instead of writing Axios logic here
+    try {
       const newUser = await registerUser({ username, email, password });
-
-      // 2. Save credentials to localStorage for instant login
       localStorage.setItem("currentUser", JSON.stringify(newUser));
-
       setSuccess("Registration successful!");
-      
-      // 3. Redirect directly to the home page
       navigate("/Home"); 
-
     } catch (err) {
-      // Display the specific error thrown by your authService (e.g., "Account already exists")
       setError(err.message || "Something went wrong during registration.");
     }
-        
-    
-       
-    }
-     
-        
-return(
-    <div className="container">
-        <img src={logo} alt="ALGO FOODS" className="logo"/>
-        <h1>Register</h1>
+  };
 
-        <form onSubmit={submitHandler}>
+  return (
+    <div className="Twoside">
+      <div className="leftside">
+        <div className="SubmissionForm">
+          <form onSubmit={submitHandler} className="form-column">
+            <input 
+              type="text" 
+              placeholder="Username" 
+              name="username" 
+              value={username} 
+              onChange={changeHandler}
+            />
+            
+            <input 
+              type="text" 
+              placeholder="Email" 
+              name="email" 
+              value={email} 
+              onChange={changeHandler}
+            />
+            
+            <input 
+              type="password" 
+              placeholder="Password" 
+              name="password" 
+              value={password} 
+              onChange={changeHandler}
+            />
+            
+            <input 
+              type="password" 
+              placeholder="Confirm Password" 
+              name="confirmPassword" 
+              value={confirmPassword} 
+              onChange={changeHandler}
+            />
+            
+            <button type="submit" className="authbutton">
+              Register
+            </button>
+          </form>
+          
+          <p>Already have an account? <Link to="/login">Login</Link></p>
+          
+          {error && <p style={{ color: "red", fontSize: "16px" }}>{error}</p>}
+          {success && <p style={{ color: "darkgreen", fontSize: "16px" }}>{success}</p>}
+        </div>
+      </div>
 
-            <input type="text" 
-            placeholder="username" 
-            name="username" 
-            value={username} 
-            onChange={changeHandler}/>
-            <br></br>
-            <br></br>
-
-            <input type="text" 
-            placeholder="Email" 
-            name="email" 
-            value={email} 
-            onChange={changeHandler}/>
-            <br></br>
-            <br></br>
-
-            <input type="password" 
-            placeholder="password" 
-            name="password" 
-            value={password} 
-            onChange={changeHandler}/>
-            <br></br>
-            <br></br>
-
-                <input type="password" 
-                placeholder="confirmPassword" 
-                name="confirmPassword" 
-                value={confirmPassword} 
-                onChange={changeHandler}/>
-                <br></br>
-                <br></br>
-
-            <input className="btn" type="Submit" value="Register" onClick={changeHandler}/>
-
-         
-
-        </form>
-        <p>Already have an acount?<Link to="/login">Login</Link></p>
-         {error && <p style={{color:"red", fontSize:"25px"}}>{error}</p>}
-          {success && <p style={{color:"darkgreen", fontSize:"25px"}}>{success}</p>}
+      <div className="rightside">
+        <div className="logo-container">
+          <img src={logo} alt="ALGO FOODS Logo" className="side-logo" />
+        </div>
+      </div>
     </div>
-    
-)
+  );
 }
+
 export default Register;
