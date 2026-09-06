@@ -6,7 +6,7 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    console.log("User logged out");
+    localStorage.removeItem("currentUser");
     navigate('/login');
   };
 
@@ -15,20 +15,20 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
       <nav className="floating-navbar">
         <Link to="/" className="nav-logo"><b>ALGO FOODS</b></Link>
         
+        {/* Search bar positioned directly after ALGO FOODS */}
+        <div className="search-bar">
+          <input 
+            type="text" 
+            placeholder="Search for food..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="search-input" 
+          />
+        </div>
+
         <div className="nav-links">
-            <div className="search-bar">
-            <input 
-              type="text" 
-              placeholder="Search for food..." 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input" 
-            />
-          </div>
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/menu" className="nav-link">Menu</Link>
-          
-          
           <Link to="/orders" className="nav-link">Orders</Link>
         </div>
 

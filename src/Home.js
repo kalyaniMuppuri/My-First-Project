@@ -10,6 +10,7 @@ function Home() {
       .then((res) => res.json())
       .then((data) => setFoods(data));
   }, []);
+
   const filteredFoods = foods.filter((food) =>
     food.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -18,16 +19,17 @@ function Home() {
     <div className="container">
       <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       
-      <div style={{ marginTop: '100px' }}>
+      <div style={{ marginTop: '140px' }}>
         <h1 className="title">ALGO FOODS</h1>
     
         <div className="food-list">
-          {foods.map((food) => (
+          {/* FIXED: Mapped over filteredFoods instead of foods */}
+          {filteredFoods.map((food) => (
             <div className="food-card" key={food.id}>
               <img src={food.image} alt={food.name} /> 
               <h2>{food.name}</h2>  
-              <p>{food.category}</p>  
-              <span>₹{food.price}/-</span> 
+              <p className="category">{food.category}</p>  
+              <span className="price">₹{food.price}/-</span> 
             </div>  
           ))}
         </div>
