@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import logo from "./logo.png";
-
-
-
 
 function Login() {
   const [data, setData] = useState({
@@ -11,22 +9,27 @@ function Login() {
     email: "",
     password: ""
   });
-    const [error, setError] = useState("");
+  
+  const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  
   const { username, email, password } = data;
 
   const changeHandler = e => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const submitHandler = async(e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    localStorage.setItem("tempUser",JSON.stringify(data));
-     setError("");
+    setError("");
     setSuccess("");
 
-    if (username === "" || email === "" || password === "" ) {
+    const trimmedUsername = username.trim();
+    const trimmedEmail = email.trim();
+
+    if (!trimmedUsername || !trimmedEmail || !password) {
       setError("Please fill all the fields");
       return;
     }
@@ -34,13 +37,39 @@ function Login() {
       setError("Password must be at least 6 characters");
       return;
     }
-    if (!email.includes("@") || !email.includes(".")) {
+    if (!trimmedEmail.includes("@") || !trimmedEmail.includes(".")) {
       setError("Please enter a valid email");
       return;
     }
-   setSuccess("login details saved, go to Register");
-   navigate("/register",{state:data});
-};
+
+    try {
+      setLoading(true);
+
+      const response = await axios.get("http://localhost:3001/users"); 
+      const users = response.data;
+
+      const matchedUser = users.find(
+        (user) => 
+          user.username === trimmedUsername && 
+          user.email === trimmedEmail && 
+          user.password === password
+      );
+
+      if (matchedUser) {
+        localStorage.setItem("currentUser", JSON.stringify(matchedUser));
+        setSuccess("Login successful! Redirecting...");
+        setTimeout(() => {
+          navigate("/home");
+        }, 1000);
+      } else {
+        setError("Invalid credentials. Please check your details or register.");
+      }
+    } catch (err) {
+      setError("Failed to connect to the database. Make sure your server is running.");
+    } finally {
+      setLoading(false);
+    }
+  };
     
  return (
     <div className="Twoside">
@@ -71,12 +100,12 @@ function Login() {
               onChange={changeHandler}
             />
             
-            <button type="submit" className="authbutton">
-              Login
+            <button type="submit" className="authbutton" disabled={loading}>
+              {loading ? "Checking..." : "Login"}
             </button>
           </form>
           
-          <p>Not a User?<Link to="/register">Register Now</Link>  </p>
+          <p>Not a User? <Link to="/register">Register Now</Link></p>
           {error && <p style={{ color: "red", fontSize: "16px" }}>{error}</p>}
           {success && <p style={{ color: "darkgreen", fontSize: "16px" }}>{success}</p>}
         </div>
