@@ -15,7 +15,7 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
       <nav className="floating-navbar">
         <Link to="/" className="nav-logo"><b>ALGO FOODS</b></Link>
         
-        {/* Search bar positioned directly after ALGO FOODS */}
+        
         <div className="search-bar">
           <input 
             type="text" 
@@ -28,8 +28,8 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
 
         <div className="nav-links">
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/Login" className="nav-link">Menu</Link>
-          <Link to="/Login" className="nav-link">Orders</Link>
+          <Link to="/menu" className="nav-link">Menu</Link>
+          <Link to="/orders" className="nav-link">Orders</Link>
         </div>
 
         <button onClick={handleLogout} className="nav-logout">

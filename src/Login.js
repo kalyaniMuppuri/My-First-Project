@@ -76,7 +76,7 @@ function Login() {
             </button>
           </form>
           
-          <p>login done? please complete the registration  <Link to="/register">Register</Link></p>
+          <p>Not a User?<Link to="/register">Register Now</Link>  </p>
           {error && <p style={{ color: "red", fontSize: "16px" }}>{error}</p>}
           {success && <p style={{ color: "darkgreen", fontSize: "16px" }}>{success}</p>}
         </div>

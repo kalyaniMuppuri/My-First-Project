@@ -96,7 +96,7 @@ function Register() {
             </button>
           </form>
           
-          <p>Registration done? go to home<Link to="/home">Home</Link></p>
+          <p>Already a User?<Link to="/">Login Now</Link></p>
           
           {error && <p style={{ color: "red", fontSize: "16px" }}>{error}</p>}
           {success && <p style={{ color: "darkgreen", fontSize: "16px" }}>{success}</p>}

@@ -29,7 +29,8 @@ function Home() {
               <img src={food.image} alt={food.name} /> 
               <h2>{food.name}</h2>  
               <p className="category">{food.category}</p>  
-              <span className="price">₹{food.price}/-</span> 
+              <span className="price">₹{food.price}/-</span>
+              <button style={{right:"",borderRadius:"10px",width:"60px"}}>Add</button> 
             </div>  
           ))}
         </div>
