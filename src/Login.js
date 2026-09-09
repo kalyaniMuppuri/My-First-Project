@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "./AuthServices";
 import logo from "./logo.png"; 
+import { useEffect } from "react";
 
 function Login() {
   const [data, setData] = useState({
@@ -14,6 +15,12 @@ function Login() {
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  useEffect(()=>{
+    document.body.style.overflow="hidden";
+    return()=>{
+        document.body.style.overflow="auto";
+    }
+  },[]);
   
   const { username, email, password } = data;
 

@@ -72,11 +72,12 @@ code {
   object-fit: cover;
   filter:brightness(0.55);/*dim*/
 }
-html,body{
+.login-container,.register-container{
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden !important;
+  display: flex;
 }
 .brand-quote {
   position:absolute;
