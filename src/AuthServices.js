@@ -8,8 +8,7 @@ export const registerUser=async({username,email,password})=>{
         });
 
         if(existingUser.data.length>0){
-            return existingUser.data[0];
-
+            throw new Error("User with this email already exists");
         }
 
         const response=await axios.post(API_URL,{
@@ -20,9 +19,8 @@ export const registerUser=async({username,email,password})=>{
         return response.data;
 
     }catch(error){
-        console.log("RegistrationFailed:",error.message);
-        return{username,email,password,id:Date.now().toString()};
-    
+        console.log("Registration Failed:",error.message);
+        throw error;
     }
 };
 
@@ -33,11 +31,11 @@ export const loginUser=async(email,password)=>{
         });
 
         if(response.data.length===0){
-            throw new Error("user not found");
+            throw new Error("User not found");
         }
             const user=response.data[0];
             if(user.password!==password){
-                throw new Error("invalid credentials");
+                throw new Error("Invalid credentials");
             }
             localStorage.setItem('currentUser',JSON.stringify(user));
             return user;

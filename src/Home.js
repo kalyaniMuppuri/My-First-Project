@@ -1,14 +1,22 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import foodimage from "./background.jpg"; 
 
 function Home() {
   const [foods, setFoods] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:3001/foods")
-      .then((res) => res.json())
-      .then((data) => setFoods(data));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch food data");
+        }
+        return res.json();
+      })
+      .then((data) => setFoods(data))
+      .catch((err) => setError(err.message));
   }, []);
 
   const filteredFoods = foods.filter((food) =>
@@ -16,21 +24,30 @@ function Home() {
   );
 
   return (
-    <div className="container">
+   
+    <div className="home-container">
       <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       
-      <div style={{ marginTop: '140px' }}>
-        <h1 className="title">ALGO FOODS</h1>
-    
+      <div 
+        className="hero-section"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${foodimage})`
+        }}
+      >
+        <h1 className="hero-title">ALGO FOODS</h1>
+        <p className="hero-subtitle">Discover the best food & drinks in Hyderabad</p>
+      </div>
+  
+      <div className="content-section">
+        {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
         <div className="food-list">
-          {/* FIXED: Mapped over filteredFoods instead of foods */}
           {filteredFoods.map((food) => (
             <div className="food-card" key={food.id}>
-              <img src={food.image} alt={food.name} /> 
-              <h2>{food.name}</h2>  
-              <p className="category">{food.category}</p>  
-              <span className="price">₹{food.price}/-</span>
-              <button style={{right:"",borderRadius:"10px",width:"60px"}}>Add</button> 
+              <img src={food.image} alt={food.name} className="food-card-image" /> 
+              <h2 className="food-card-title">{food.name}</h2>  
+              <p className="food-card-category">{food.category}</p>  
+              <span className="food-card-price">₹{food.price}/-</span>
+              <button className="food-card-button">Add to Cart</button> 
             </div>  
           ))}
         </div>

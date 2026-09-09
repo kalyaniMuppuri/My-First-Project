@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { registerUser } from "./AuthSerrvices";
-import logo from "./logo.png" 
+import { registerUser } from "./AuthServices";
+import logo from "./logo.png";
 
 function Register() {
   const [data, setData] = useState({
@@ -68,7 +68,7 @@ function Register() {
             />
             
             <input 
-              type="text" 
+              type="email" 
               placeholder="Email" 
               name="email" 
               value={email} 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { loginUser } from "./AuthServices";
 import logo from "./logo.png";
 
 function Login() {
@@ -44,28 +44,13 @@ function Login() {
 
     try {
       setLoading(true);
-
-      const response = await axios.get("http://localhost:3001/users"); 
-      const users = response.data;
-
-      const matchedUser = users.find(
-        (user) => 
-          user.username === trimmedUsername && 
-          user.email === trimmedEmail && 
-          user.password === password
-      );
-
-      if (matchedUser) {
-        localStorage.setItem("currentUser", JSON.stringify(matchedUser));
-        setSuccess("Login successful! Redirecting...");
-        setTimeout(() => {
-          navigate("/home");
-        }, 1000);
-      } else {
-        setError("Invalid credentials. Please check your details or register.");
-      }
+      await loginUser(trimmedEmail, password);
+      setSuccess("Login successful! Redirecting...");
+      setTimeout(() => {
+        navigate("/home");
+      }, 1000);
     } catch (err) {
-      setError("Failed to connect to the database. Make sure your server is running.");
+      setError(err.message || "Failed to connect to the database. Make sure your server is running.");
     } finally {
       setLoading(false);
     }
@@ -85,7 +70,7 @@ function Login() {
             />
             
             <input 
-              type="text" 
+              type="email" 
               placeholder="Email" 
               name="email" 
               value={email} 
@@ -114,6 +99,9 @@ function Login() {
       <div className="rightside">
         <div className="logo-container">
           <img src={logo} alt="ALGO FOODS Logo" className="side-logo" />
+          <p className="brand-quote">
+            "Let's work magic in the kitchen and bring good food to your table."
+          </p>
         </div>
       </div>
     </div>

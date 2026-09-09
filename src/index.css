@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 body {
   padding: 0;
   margin: 0;
@@ -7,6 +8,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f5f5;
+  box-sizing: border-box;
+}
+.brand-quote {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 1.5rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 code {
@@ -31,6 +45,7 @@ code {
   align-items: center;
   padding: 40px;
 }
+
 
 .rightside {
   flex: 1.2;
@@ -76,6 +91,117 @@ code {
 
 .SubmissionForm input:focus {
   border-color: #8B9A6E !important;
+}
+.home-container {
+  margin: 0;
+  padding: 0;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* Matches the spacing of your other nav links */
+}
+
+.nav-cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #333333;
+  transition: color 0.2s ease;
+}
+
+.nav-cart:hover {
+  color: #8B9A6E; /* Uses your theme's green accent */
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #e63946; /* A distinct red to catch the eye */
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.hero-title {
+  font-family: "Bebas Neue", sans-serif;
+  color: #ffffff;
+  font-size: 6rem;
+  margin: 0;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+.content-section {
+  padding: 80px 20px;
+  background-color: #f5f5f5;
+}
+
+.food-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.food-card-title {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.food-card-category {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.food-card-price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+.food-card-button {
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  background-color: #8B9A6E;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.food-card-button:hover {
+  background-color: #7a8a5f;
 }
 
 .authbutton {
