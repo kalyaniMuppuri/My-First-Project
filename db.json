@@ -113,6 +113,5 @@
       "availability": true,
       "image": "/Images/mango-juice.jpg"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

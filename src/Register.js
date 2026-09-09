@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "./AuthServices";
-import logo from "./logo.png";
+import logo from "./logo.png"; 
+
 
 function Register() {
   const [data, setData] = useState({
@@ -56,7 +57,8 @@ function Register() {
   };
   return (
     <div className="Twoside">
-      <div className="leftside">
+           <div className="leftside">
+               <img src={logo} alt="logo" className="app-logo"/>
         <div className="SubmissionForm">
           <form onSubmit={submitHandler} className="form-column">
             <input 
@@ -105,9 +107,12 @@ function Register() {
 
       <div className="rightside">
         <div className="logo-container">
-          <img src={logo} alt="ALGO FOODS Logo" className="side-logo" />
-        </div>
-      </div>
+          <img src={"/Images/food-image.jpg"} alt="ALGO FOODS Logo" className="side-logo" />
+           <p className="brand-quote">
+            "Let's work magic in the kitchen and bring good food to your table."
+          </p>
+          </div>
+          </div>
     </div>
   );
 }
