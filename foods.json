@@ -1,0 +1,550 @@
+{
+
+  "foods": [
+    {
+      "id": 1,
+      "name": "Idli",
+      "description": "Soft steamed rice cakes served with chutney and sambar.",
+      "category": "Breakfast",
+      "type": "Veg",
+      "price": 100,
+      "image": "/Images/idli.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Masala Dosa",
+      "description": "Crispy dosa filled with spiced potato masala.",
+      "category": "Breakfast",
+      "type": "Veg",
+      "price": 120,
+      "image": "/Images/masala-dosa.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Plain Dosa",
+      "description": "Crispy South Indian rice and lentil crepe.",
+      "category": "Breakfast",
+      "type": "Veg",
+      "price": 150,
+      "image": "/Images/plain-dosa.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Vada",
+      "description": "Crispy South Indian lentil fritters served with chutney.",
+      "category": "Breakfast",
+      "type": "Veg",
+      "price": 150,
+      "image": "/Images/vada.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Pongal",
+      "description": "Traditional rice and lentil dish seasoned with spices.",
+      "category": "Breakfast",
+      "type": "Veg",
+      "price": 130,
+      "image": "/Images/pongal.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Upma",
+      "description": "Savory semolina breakfast cooked with vegetables and spices.",
+      "category": "Breakfast",
+      "type": "Veg",
+      "price": 120,
+      "image": "/Images/upma.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Poori",
+      "description": "Deep-fried fluffy wheat bread served with curry.",
+      "category": "Breakfast",
+      "type": "Veg",
+      "price": 140,
+      "image": "/Images/poori.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Pesarattu",
+      "description": "Green gram dosa served with chutney.",
+      "category": "Breakfast",
+      "type": "Veg",
+      "price": 200,
+      "image": "/Images/pesarattu.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Pav Bhaji",
+      "description": "Spiced vegetable curry served with buttered pav.",
+      "category": "Breakfast",
+      "type": "Veg",
+      "price": 170,
+      "image": "/Images/pav-bhaji.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Bread Omelette",
+      "description": "Egg omelette served with toasted bread.",
+      "category": "Breakfast",
+      "type": "Non-Veg",
+      "price": 160,
+      "image": "/Images/bread-omelette.jpg"
+    },
+
+    {
+      "id": 11,
+      "name": "Chicken Biryani",
+      "description": "Aromatic basmati rice cooked with spicy chicken.",
+      "category": "Lunch",
+      "type": "Non-Veg",
+      "price": 300,
+      "image": "/Images/Chicken-biryani.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Mutton Biryani",
+      "description": "Fragrant rice cooked with tender mutton and spices.",
+      "category": "Lunch",
+      "type": "Non-Veg",
+      "price": 400,
+      "image": "/Images/mutton-biryani.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Veg Biryani",
+      "description": "Aromatic rice cooked with mixed vegetables and spices.",
+      "category": "Lunch",
+      "type": "Veg",
+      "price": 220,
+      "image": "/Images/veg-biryani.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Paneer Biryani",
+      "description": "Basmati rice cooked with paneer and aromatic spices.",
+      "category": "Lunch",
+      "type": "Veg",
+      "price": 250,
+      "image": "/Images/panner-biryani.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Chicken Fried Rice",
+      "description": "Fried rice tossed with chicken, vegetables and sauces.",
+      "category": "Lunch",
+      "type": "Non-Veg",
+      "price": 240,
+      "image": "/Images/Chicken-fried-rice.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Veg Fried Rice",
+      "description": "Fried rice cooked with fresh vegetables and sauces.",
+      "category": "Lunch",
+      "type": "Veg",
+      "price": 180,
+      "image": "/Images/veg-fried-rice.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Chicken Meals",
+      "description": "Complete meal with rice, chicken curry and side dishes.",
+      "category": "Lunch",
+      "type": "Non-Veg",
+      "price": 300,
+      "image": "/Images/chicken-meals.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Veg Meals",
+      "description": "Traditional vegetarian meal served with rice and curries.",
+      "category": "Lunch",
+      "type": "Veg",
+      "price": 200,
+      "image": "/Images/veg-meals.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Fish Rice",
+      "description": "Rice served with flavorful fish curry.",
+      "category": "Lunch",
+      "type": "Non-Veg",
+      "price": 280,
+      "image": "/Images/fish-rice.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Paneer Rice",
+      "description": "Rice prepared with soft paneer and Indian spices.",
+      "category": "Lunch",
+      "type": "Veg",
+      "price": 220,
+      "image": "/Images/panner-rice.jpg"
+    },
+
+    {
+      "id": 21,
+      "name": "Chicken Curry",
+      "description": "Spicy Indian chicken curry cooked with aromatic spices.",
+      "category": "Dinner",
+      "type": "Non-Veg",
+      "price": 280,
+      "image": "/Images/chicken-curry.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Mutton Curry",
+      "description": "Tender mutton cooked in a rich spicy gravy.",
+      "category": "Dinner",
+      "type": "Non-Veg",
+      "price": 380,
+      "image": "/Images/mutton-curry.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Paneer Butter Masala",
+      "description": "Paneer cooked in creamy tomato and butter gravy.",
+      "category": "Dinner",
+      "type": "Veg",
+      "price": 240,
+      "image": "/Images/paneer-butter-masala.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Dal Tadka",
+      "description": "Yellow lentils tempered with spices and herbs.",
+      "category": "Dinner",
+      "type": "Veg",
+      "price": 150,
+      "image": "/Images/dal-tadka.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Butter Chicken",
+      "description": "Chicken cooked in a creamy buttery tomato gravy.",
+      "category": "Dinner",
+      "type": "Non-Veg",
+      "price": 320,
+      "image": "/Images/butter-chicken.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Kadai Paneer",
+      "description": "Paneer cooked with capsicum, onion and kadai spices.",
+      "category": "Dinner",
+      "type": "Veg",
+      "price": 220,
+      "image": "/Images/kadai-paneer.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Fish Curry",
+      "description": "Fish cooked in a spicy traditional curry.",
+      "category": "Dinner",
+      "type": "Non-Veg",
+      "price": 300,
+      "image": "/Images/fish-curry.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Chana Masala",
+      "description": "Chickpeas cooked in a spicy tomato gravy.",
+      "category": "Dinner",
+      "type": "Veg",
+      "price": 160,
+      "image": "/Images/chana-masala.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Chicken Tikka Masala",
+      "description": "Grilled chicken pieces cooked in creamy spicy gravy.",
+      "category": "Dinner",
+      "type": "Non-Veg",
+      "price": 210,
+      "image": "/Images/chicken-tikka-masala1.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Mixed Vegetable Curry",
+      "description": "Fresh mixed vegetables cooked in Indian spices.",
+      "category": "Dinner",
+      "type": "Veg",
+      "price": 350,
+      "image": "/Images/mixed-vegetable-curry.jpg"
+    },
+
+    {
+      "id": 31,
+      "name": "Chicken 65",
+      "description": "Crispy spicy deep-fried chicken snack.",
+      "category": "Snacks",
+      "type": "Non-Veg",
+      "price": 250,
+      "image": "/Images/Chicken-65.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Chicken Wings",
+      "description": "Crispy seasoned chicken wings.",
+      "category": "Snacks",
+      "type": "Non-Veg",
+      "price": 280,
+      "image": "/Images/chicken-wings.jpg"
+    },
+    {
+      "id": 33,
+      "name": "Samosa",
+      "description": "Crispy pastry filled with spiced potatoes.",
+      "category": "Snacks",
+      "type": "Veg",
+      "price": 100,
+      "image": "/Images/samosa.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Paneer 65",
+      "description": "Crispy spicy fried paneer pieces.",
+      "category": "Snacks",
+      "type": "Veg",
+      "price": 220,
+      "image": "/Images/panner-65.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Veg Spring Rolls",
+      "description": "Crispy rolls filled with seasoned vegetables.",
+      "category": "Snacks",
+      "type": "Veg",
+      "price": 180,
+      "image": "/Images/veg-spring-Rolls.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Chicken Nuggets",
+      "description": "Crispy bite-sized chicken pieces.",
+      "category": "Snacks",
+      "type": "Non-Veg",
+      "price": 200,
+      "image": "/Images/chicken-nuggets.jpg"
+    },
+    {
+      "id": 37,
+      "name": "French Fries",
+      "description": "Crispy golden potato fries.",
+      "category": "Snacks",
+      "type": "Veg",
+      "price": 150,
+      "image": "/Images/french-fries.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Gobi Manchurian",
+      "description": "Crispy cauliflower tossed in spicy Manchurian sauce.",
+      "category": "Snacks",
+      "type": "Veg",
+      "price": 180,
+      "image": "/Images/gobi-manchurian.jpg"
+    },
+    {
+      "id": 39,
+      "name": "Chicken Manchurian",
+      "description": "Chicken pieces tossed in spicy Manchurian sauce.",
+      "category": "Snacks",
+      "type": "Non-Veg",
+      "price": 250,
+      "image": "/Images/chicken-manchurian.jpg"
+    },
+    {
+      "id": 40,
+      "name": "Onion Pakoda",
+      "description": "Crispy onion fritters made with gram flour.",
+      "category": "Snacks",
+      "type": "Veg",
+      "price": 120,
+      "image": "/Images/onion-pakoda.jpg"
+    },
+
+    {
+      "id": 41,
+      "name": "Gulab Jamun",
+      "description": "Soft milk dumplings soaked in sweet syrup.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 180,
+      "image": "/Images/gulab-jamun.jpg"
+    },
+    {
+      "id": 42,
+      "name": "Rasmalai",
+      "description": "Soft cheese dumplings soaked in sweet creamy milk.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 200,
+      "image": "/Images/rasmalai.jpg"
+    },
+    {
+      "id": 43,
+      "name": "Ice Cream",
+      "description": "Creamy chilled dessert available in different flavors.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 250,
+      "image": "/Images/ice-cream.jpg"
+    },
+    {
+      "id": 44,
+      "name": "Chocolate Cake",
+      "description": "Rich and soft chocolate flavored cake.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 250,
+      "image": "/Images/chocolate-cake.jpg"
+    },
+    {
+      "id": 45,
+      "name": "Brownie",
+      "description": "Soft and rich chocolate brownie.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 200,
+      "image": "/Images/brownie.jpg"
+    },
+    {
+      "id": 46,
+      "name": "Jalebi",
+      "description": "Crispy spiral sweet soaked in sugar syrup.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 120,
+      "image": "/Images/jalebi.jpg"
+    },
+    {
+      "id": 47,
+      "name": "Kheer",
+      "description": "Creamy rice pudding flavored with cardamom.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 150,
+      "image": "/Images/kheer.jpg"
+    },
+    {
+      "id": 48,
+      "name": "Rasgulla",
+      "description": "Soft cottage cheese balls soaked in sugar syrup.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 130,
+      "image": "/Images/rasgulla.jpg"
+    },
+    {
+      "id": 49,
+      "name": "Carrot Halwa",
+      "description": "Sweet grated carrot dessert cooked with milk and nuts.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 160,
+      "image": "/Images/carrot-halwa.jpg"
+    },
+    {
+      "id": 50,
+      "name": "Fruit Salad",
+      "description": "Fresh seasonal fruits served as a healthy dessert.",
+      "category": "Desserts",
+      "type": "Veg",
+      "price": 180,
+      "image": "/Images/fruit-salad.jpg"
+    },
+
+    {
+      "id": 51,
+      "name": "Cold Coffee",
+      "description": "Chilled creamy coffee drink.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 180,
+      "image": "/Images/cold-coffee.jpg"
+    },
+    {
+      "id": 52,
+      "name": "Mango juice",
+      "description": "Refreshing creamy shake made with ripe mangoes.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 200,
+      "image": "/Images/mango-juice.jpg"
+    },
+    {
+      "id": 53,
+      "name": "Strawberry Shake",
+      "description": "Sweet creamy shake made with strawberries.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 220,
+      "image": "/Images/strawberry-shake.jpg"
+    },
+    {
+      "id": 54,
+      "name": "Lemon Juice",
+      "description": "Refreshing lemon drink served chilled.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 120,
+      "image": "/Images/lemon-juice.jpg"
+    },
+    {
+      "id": 55,
+      "name": "Fresh Lime Soda",
+      "description": "Refreshing fizzy lime drink.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 120,
+      "image": "/Images/fresh-lime-soda.jpg"
+    },
+    {
+      "id": 56,
+      "name": "Masala Tea",
+      "description": "Hot Indian tea prepared with aromatic spices.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 100,
+      "image": "/Images/masala-tea.jpg"
+    },
+    {
+      "id": 57,
+      "name": "Cappuccino",
+      "description": "Creamy coffee topped with milk foam.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 250,
+      "image": "/Images/cappuccino.jpg"
+    },
+    {
+      "id": 58,
+      "name": "Oreo Shake",
+      "description": "Creamy milkshake blended with Oreo cookies.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 140,
+      "image": "/Images/oreo-shake.jpg"
+    },
+    {
+      "id": 59,
+      "name": "Watermelon Juice",
+      "description": "Fresh and refreshing watermelon juice.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 250,
+      "image": "/Images/watermelon-juice.jpg"
+    },
+    {
+      "id": 60,
+      "name": "Chocolate Milkshake",
+      "description": "Rich creamy milkshake with chocolate flavor.",
+      "category": "Beverages",
+      "type": "Veg",
+      "price": 200,
+      "image": "/Images/chocolate-milkshake.jpg"
+    }
+  ]
+}
