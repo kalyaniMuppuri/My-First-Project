@@ -11,7 +11,13 @@
       "email": "harshamodina@gmail.com",
       "password": "1234567",
       "id": "haAYxaH5RUg"
+    },
+    {
+      "username": "kalyani",
+      "email": "kalyanimuppuri@gmail.com",
+      "password": "123456",
+      "id": "trR4fOojvyY"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
- 

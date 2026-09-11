@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "./AuthServices";
 import logo from "./logo.png"; 
@@ -15,6 +15,13 @@ function Register() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
+
+    useEffect(()=>{
+      document.body.style.overflow="hidden";
+      return()=>{
+          document.body.style.overflow="auto";
+      }
+    },[]);
 
   const { username, email, password, confirmPassword } = data;
 
