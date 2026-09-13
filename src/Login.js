@@ -33,7 +33,7 @@ function Login() {
     setError("");
     setSuccess("");
 
-    const trimmedUsername = username.trim();
+    const trimmedUsername = username.trim();/* trim() removes extra spaces */
     const trimmedEmail = email.trim();
 
     if (!trimmedUsername || !trimmedEmail || !password) {

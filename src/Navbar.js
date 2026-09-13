@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './index.css';
+import { getCartCount } from './cartService';
 
 const Navbar = ({ searchQuery, setSearchQuery }) => {
   const navigate = useNavigate();
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    const updateCount = () => setCartCount(getCartCount());
+
+    updateCount(); // initial read on mount
+
+    // Stay in sync when addToCart/updateQuantity/removeFromCart/clearCart run
+    window.addEventListener('cart-updated', updateCount);
+    return () => window.removeEventListener('cart-updated', updateCount);
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("currentUser");
@@ -49,8 +61,7 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
               <circle cx="20" cy="21" r="1"></circle>
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
-            {/* Optional indicator for items in cart */}
-            <span className="cart-badge">1</span>
+            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </Link>
 
           <button onClick={handleLogout} className="nav-logout">

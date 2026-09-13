@@ -16,8 +16,10 @@ function Register() {
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
+/* stop scrolling */
+
     useEffect(()=>{
-      document.body.style.overflow="hidden";
+      document.body.style.overflow="hidde";
       return()=>{
           document.body.style.overflow="auto";
       }
@@ -57,7 +59,7 @@ function Register() {
     const newUser=await registerUser({username,email,password});
     localStorage.setItem("currentUser",JSON.stringify(newUser));
     setSuccess("Registration successful");
-    navigate("/home")
+    navigate("/Home")
    }catch(err){
     setError(err.message || "Registration failed")
    }
