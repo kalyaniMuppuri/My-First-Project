@@ -57,7 +57,7 @@ function Register() {
     const newUser=await registerUser({username,email,password});
     localStorage.setItem("currentUser",JSON.stringify(newUser));
     setSuccess("Registration successful");
-    navigate("/home")
+    navigate("/Home")
    }catch(err){
     setError(err.message || "Registration failed")
    }
