@@ -57,7 +57,7 @@ function Checkout() {
 
     setPlacing(true);
     try {
-      const res = await fetch("http://localhost:3002/orders", {
+      const res = await fetch("http://localhost:3001/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(order),

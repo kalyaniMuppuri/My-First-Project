@@ -77,7 +77,7 @@ function Home() {
         }}
       >
         <h1 className="hero-title">ALGO FOODS</h1>
-        <p className="hero-subtitle">Discover the best food & drinks</p>
+        <p className="hero-subtitle">Discover the best food & drinks in Hyderabad</p>
       </div>
 
       {/* ================= CONTENT ================= */}
