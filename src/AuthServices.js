@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'; /* axios is used to pass the request from frontend to backend */
 const API_URL='http://localhost:3000/users';
 
 export const registerUser=async({username,email,password})=>{

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import foodImage from "./background.jpg";
+import { addToCart } from "./cartService";
 
 const CATEGORIES = ["All", "Breakfast", "Lunch", "Dinner", "Snacks", "Desserts", "Beverages"];
 const TYPES = ["All", "Veg", "Non-Veg"];
@@ -55,6 +56,12 @@ function Home() {
     setType("All");
     setPriceRange("All");
     setSearchQuery("");
+  };
+
+  // ================= ADD TO CART =================
+  const handleAddToCart = (e, food) => {
+    e.stopPropagation();
+    addToCart(food);
   };
 
   return (
@@ -161,7 +168,12 @@ function Home() {
                 <p>Type: {food.type}</p>
                 <p className="food-card-price">₹{food.price}</p>
                 <p>{food.availability}</p>
-                <button className="food-card-button">Add to Cart</button>
+                <button
+                  className="food-card-button"
+                  onClick={(e) => handleAddToCart(e, food)}
+                >
+                  Add to Cart
+                </button>
               </div>
             ))}
           </div>

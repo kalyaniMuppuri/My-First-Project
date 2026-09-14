@@ -16,8 +16,10 @@ function Register() {
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
+/* stop scrolling */
+
     useEffect(()=>{
-      document.body.style.overflow="hidden";
+      document.body.style.overflow="hidde";
       return()=>{
           document.body.style.overflow="auto";
       }
