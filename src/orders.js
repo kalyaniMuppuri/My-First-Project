@@ -35,9 +35,9 @@ function Orders() {
   };
 
   return (
+    
     <div className="orders-page">
       <Navbar searchQuery="" setSearchQuery={() => {}} />
-
       <div className="orders-content">
         <h1>Your Orders</h1>
 

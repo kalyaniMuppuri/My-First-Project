@@ -435,7 +435,7 @@ code {
   }
 .filter-select:focus {
   outline: none;
-  border-color: #ff6b35;
+  border-color:black;
   box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
   }
 .reset-btn {
@@ -486,7 +486,7 @@ code {
 }
 
 .cart-empty button {
-  background: #ff5722;
+  background:#8B9A6E ;
   color: #fff;
   border: none;
   padding: 10px 24px;
@@ -496,7 +496,7 @@ code {
 }
 
 .cart-empty button:hover {
-  background: #e64a19;
+  background: #8B9A6E;
 }
 
 /* ============ Cart Items List ============ */
@@ -602,7 +602,7 @@ code {
 }
 
 .cart-item-remove:hover {
-  color: #e53935;
+  color:  #999;
 }
 
 /* ============ Summary / Actions ============ */
@@ -646,12 +646,12 @@ code {
 }
 
 .cart-checkout-btn {
-  background: #ff5722;
+  background: #8B9A6E;
   color: #fff;
 }
 
 .cart-checkout-btn:hover {
-  background: #e64a19;
+  background: #8B9A6E;
 }
 
 /* ============ Navbar Cart Badge ============ */
@@ -666,7 +666,7 @@ code {
   position: absolute;
   top: -8px;
   right: -10px;
-  background: #ff5722;
+  background:#8B9A6E;
   color: #fff;
   font-size: 11px;
   font-weight: 600;
@@ -867,7 +867,7 @@ code {
 .checkout-empty button,
 .checkout-success button {
   margin-top: 16px;
-  background: #ff5722;
+  background:#EEEEEE;
   color: #fff;
   border: none;
   padding: 10px 24px;
@@ -890,9 +890,20 @@ code {
 
 
 /* ============ Orders Page ============ */
+:root {
+  --sage: #8B9A6E;
+  --sage-dark: #798562;
+  --cream: #F7F2EB;
+  --beige: #EAE2D6;
+  --gray: #EEEEEE;
+  --ink: #2E2E2E;
+  --ink-muted: #6B6B5F;
+  --error: #C0392B;
+}
+
 .orders-page {
   min-height: 100vh;
-  background: #f9f9f7;
+  background: var(--cream);
 }
 
 .orders-content {
@@ -904,12 +915,15 @@ code {
 .orders-content h1 {
   font-size: 28px;
   margin-bottom: 24px;
+  color: var(--ink);
 }
 
 .orders-empty {
   text-align: center;
   padding: 60px 20px;
-  color: #666;
+  color: var(--ink-muted);
+  background-color: var(--beige);
+  border-radius: 12px;
 }
 
 .orders-list {
@@ -920,10 +934,10 @@ code {
 
 /* ============ Order Card ============ */
 .order-card {
-  background: #fff;
+  background: var(--beige);
+  border: 1px solid var(--gray);
   border-radius: 12px;
   padding: 18px 20px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
 .order-card-header {
@@ -931,18 +945,18 @@ code {
   align-items: center;
   gap: 12px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--gray);
   margin-bottom: 10px;
   font-size: 13px;
 }
 
 .order-id {
   font-weight: 600;
-  color: #333;
+  color: var(--ink);
 }
 
 .order-date {
-  color: #888;
+  color: var(--ink-muted);
   flex: 1;
 }
 
@@ -952,21 +966,19 @@ code {
   border-radius: 999px;
   font-size: 12px;
   font-weight: 600;
+  color: #ffffff;
 }
 
 .order-status-placed {
-  background: #fff3e0;
-  color: #ef6c00;
+  background: #C9A227;
 }
 
 .order-status-delivered {
-  background: #e8f5e9;
-  color: #2e7d32;
+  background: var(--sage);
 }
 
 .order-status-cancelled {
-  background: #ffebee;
-  color: #c62828;
+  background: var(--error);
 }
 
 /* ============ Order Items ============ */
@@ -978,7 +990,7 @@ code {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  color: #444;
+  color: var(--ink);
   padding: 4px 0;
 }
 
@@ -988,7 +1000,7 @@ code {
   justify-content: space-between;
   align-items: flex-end;
   padding-top: 10px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--gray);
   gap: 12px;
 }
 
@@ -997,13 +1009,14 @@ code {
   flex-direction: column;
   gap: 2px;
   font-size: 12px;
-  color: #777;
+  color: var(--ink-muted);
 }
 
 .order-total {
   font-size: 17px;
   font-weight: 700;
   white-space: nowrap;
+  color: var(--ink);
 }
 
 /* ============ Responsive ============ */
@@ -1021,12 +1034,10 @@ code {
     align-self: flex-end;
   }
 }
-
-
 /* ================= CHECKOUT PAGE ================= */
 .checkout-page {
   min-height: 100vh;
-  background: #f7f7f9;
+  background: #EEEEEE;
 }
 
 .checkout-content {
@@ -1038,6 +1049,7 @@ code {
 .checkout-content h1 {
   font-size: 28px;
   margin-bottom: 30px;
+  color: #3F4A2E;
 }
 
 .checkout-layout {
@@ -1050,7 +1062,7 @@ code {
 /* ---------- Order Summary Card ---------- */
 .checkout-summary {
   flex: 1 1 320px;
-  background: #fff;
+  background: #F7F2EB;
   border-radius: 12px;
   padding: 28px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
@@ -1059,15 +1071,16 @@ code {
 .checkout-summary h2 {
   font-size: 20px;
   margin-bottom: 20px;
+  color: #3F4A2E;
 }
 
 .checkout-summary-row {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #EAE2D6;
   font-size: 15px;
-  color: #444;
+  color: #5A5344;
 }
 
 .checkout-summary-total {
@@ -1077,13 +1090,14 @@ code {
   padding-top: 16px;
   font-size: 20px;
   font-weight: 700;
-  border-top: 2px solid #333;
+  color: #3F4A2E;
+  border-top: 2px solid #8B9A6E;
 }
 
 /* ---------- Delivery Form Card ---------- */
 .checkout-form {
   flex: 2 1 480px;
-  background: #fff;
+  background: #F7F2EB;
   border-radius: 12px;
   padding: 28px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
@@ -1095,11 +1109,12 @@ code {
 .checkout-form h2 {
   font-size: 20px;
   margin: 10px 0 12px;
+  color: #3F4A2E;
 }
 
 .checkout-form label {
   font-size: 14px;
-  color: #555;
+  color: #6B6455;
   margin-top: 14px;
   margin-bottom: 6px;
 }
@@ -1107,17 +1122,25 @@ code {
 .checkout-form input,
 .checkout-form textarea {
   padding: 12px 14px;
-  border: 1px solid #d8d8d8;
+  background: #fff;
+  border: 1px solid #EAE2D6;
   border-radius: 8px;
   font-size: 15px;
+  color: #3F4A2E;
   outline: none;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
   font-family: inherit;
+}
+
+.checkout-form input::placeholder,
+.checkout-form textarea::placeholder {
+  color: #A8A092;
 }
 
 .checkout-form input:focus,
 .checkout-form textarea:focus {
-  border-color: #ff6b2c;
+  border-color: #8B9A6E;
+  box-shadow: 0 0 0 3px rgba(139, 154, 110, 0.18);
 }
 
 .checkout-form-row {
@@ -1144,27 +1167,29 @@ code {
   align-items: center;
   gap: 10px;
   padding: 12px 16px;
-  border: 1px solid #ddd;
+  background: #fff;
+  border: 1px solid #EAE2D6;
   border-radius: 8px;
   cursor: pointer;
   font-size: 15px;
+  color: #3F4A2E;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 .checkout-payment-option:hover {
-  border-color: #ff6b2c;
-  background: #fff8f4;
+  border-color: #8B9A6E;
+  background: #EAE2D6;
 }
 
 .checkout-payment-option input {
-  accent-color: blue;
+  accent-color: #8B9A6E;
 }
 
 /* ---------- Place Order Button ---------- */
 .checkout-place-order-btn {
   margin-top: 10px;
   padding: 16px;
-  background: #ff5722;
+  background: #8B9A6E;
   color: #fff;
   font-size: 16px;
   font-weight: 600;
@@ -1175,46 +1200,81 @@ code {
 }
 
 .checkout-place-order-btn:hover:not(:disabled) {
-  background:#ff5722 ;
+  background: #79875E;
 }
 
 .checkout-place-order-btn:disabled {
-  background: #ffab91;
+  background: #C3CBB0;
   cursor: not-allowed;
 }
-
 /* ---------- Empty / Success States ---------- */
+/* page background */
+body {
+  background: #EEEEEE;
+}
+
 .checkout-empty,
 .checkout-success {
   max-width: 500px;
   margin: 60px auto;
   text-align: center;
-  background: #fff;
-  padding: 40px;
+  background: #F7F2EB;
+  padding: 48px 40px;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
+/* green tick circle */
+   .checkout-success-icon{
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: #8B9A6E;
+  color: #fff;
+  font-size: 34px;
+  line-height: 72px;
+}
+
 .checkout-success h1 {
-  color: #2e7d32;
+  color: #3F4A2E;
+  font-size: 40px;
   margin-bottom: 16px;
+}
+
+.checkout-success p {
+  color: #5A5344;
+  font-size: 15px;
+  margin: 8px 0;
 }
 
 .checkout-success-address {
   font-weight: 600;
-  margin: 10px 0;
+  font-size: 17px;
+  color: #3F4A2E;
+  background: #EAE2D6;
+  padding: 18px 24px;
+  border-radius: 10px;
+  margin: 24px 0;
 }
 
 .checkout-empty button,
 .checkout-success button {
   margin-top: 20px;
   padding: 12px 28px;
-  background: #ff5722;
+  background: #8B9A6E;
   color: #fff;
   border: none;
   border-radius: 8px;
   font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.checkout-empty button:hover,
+.checkout-success button:hover {
+  background: #79875E;
 }
 
 /* ---------- Responsive ---------- */
@@ -1223,3 +1283,5 @@ code {
     flex-direction: column;
   }
 }
+
+

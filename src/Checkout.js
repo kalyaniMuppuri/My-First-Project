@@ -93,6 +93,7 @@ function Checkout() {
         <Navbar searchQuery="" setSearchQuery={() => {}} />
         <div className="checkout-content">
           <div className="checkout-success">
+            <div className="checkout-success-icon">✓</div>
             <h1>Order placed!</h1>
             <p>Thanks, {form.name}. Your order will be delivered to:</p>
             <p className="checkout-success-address">
