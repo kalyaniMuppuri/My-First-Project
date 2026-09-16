@@ -403,6 +403,8 @@ code {
     align-items: flex-end;
     gap: 16px;
     margin: 16px 0 28px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background-color: #EAE2D6;
     }
 .filter-group {
   display: flex;
@@ -442,7 +444,7 @@ code {
   padding: 10px 18px;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
-  background-color: #f5f5f5;
+  background-color: #8B9A6E;
   font-size: 0.9rem;
   font-weight: 600;
   color: #333;
@@ -451,7 +453,7 @@ code {
   transition: background-color 0.15s ease;
   }
 .reset-btn:hover {
-  background-color: #ececec;
+  background-color: #8B9A6E;
   }
 
 
@@ -1282,6 +1284,92 @@ body {
   .checkout-layout {
     flex-direction: column;
   }
+}
+
+
+
+
+
+css
+/* ================= INTRO + FILTERS SECTION ================= */
+.content-section {
+  background: #F7F2EB;
+  padding: 30px 40px 10px;
+}
+
+.content-section > h2:first-of-type {
+  color: #8B9A6E;
+  font-size: 26px;
+}
+
+.content-section > p:first-of-type {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.content-section h2 {
+  color: #333;
+}
+
+/* Filters block */
+.filters-bar {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  background: #EAE2D6;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-group label {
+  font-size: 13px;
+  color: #6b6b5a;
+  font-weight: 600;
+}
+
+.filter-select {
+  padding: 10px 14px;
+  border: 1px solid #d8d0bf;
+  border-radius: 8px;
+  background: #EEEEEE;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.filter-select:focus {
+  border-color: #8B9A6E;
+}
+
+.reset-btn {
+  padding: 10px 20px;
+  background: #8B9A6E;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.reset-btn:hover {
+  background: #76835c;
+}
+
+/* Food List heading sits right after — reset background to white/plain */
+.content-section h2:has(+ .food-list),
+.content-section h2:last-of-type {
+  background: transparent;
+  padding-top: 10px;
 }
 
 
