@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import foodImage from "./background.jpg";
 import { addToCart } from "./cartService";
 
+
 const CATEGORIES = ["All", "Breakfast", "Lunch", "Dinner", "Snacks", "Desserts", "Beverages"];
 const TYPES = ["All", "Veg", "Non-Veg"];
 const PRICE_RANGES = [
@@ -67,7 +68,7 @@ function Home() {
   return (
     <div className="home-container">
       {/* ================= NAVBAR ================= */}
-      <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} foodItems={foods} />
 
       {/* ================= HERO ================= */}
       <div
