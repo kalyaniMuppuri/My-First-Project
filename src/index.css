@@ -1290,7 +1290,7 @@ body {
 
 
 
-css
+
 /* ================= INTRO + FILTERS SECTION ================= */
 .content-section {
   background: #F7F2EB;
@@ -1400,4 +1400,56 @@ css
 .suggestion-item:hover,
 .suggestion-item.active {
   background: #f2f2f2;
+}
+
+/*===============Geeting content==================*/
+.greeting-box {
+  background: linear-gradient(135deg, #8B9A6E, #EAE2D6);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.greeting-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.craving-text {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  margin: 6px 0 4px;
+}
+
+.craving-subtext {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.greeting-box {
+  background: linear-gradient(135deg, #8B9A6E, #EAE2D6);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  margin: 40px auto 24px;   
+  max-width: 900px;          
+}
+
+.content-section {
+  padding: 20px 40px;
+}
+
+
+.greeting-box {
+  background: linear-gradient(135deg, #8B9A6E, #EAE2D6);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  margin: 100px auto 24px;   
+  max-width: 900px;
 }

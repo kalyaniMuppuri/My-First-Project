@@ -64,6 +64,15 @@ function Home() {
     e.stopPropagation();
     addToCart(food);
   };
+  // ================= GREETING  =================  
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return "Good Morning";
+    if (hour < 17) return "Good Afternoon";
+    return "Good Evening";
+  };
+
+
 
   return (
     <div className="home-container">
@@ -82,13 +91,12 @@ function Home() {
       </div>
 
       {/* ================= CONTENT ================= */}
-      <div className="content-section">
-        {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
-
-        <h2>What are you craving today?</h2>
-        <p>Find your favorite food and enjoy delicious meals.</p>
-
-        {/* ================= FILTERS ================= */}
+      <div className="greeting-box">
+  <h2 className="greeting-text">{getGreeting()}! 👋</h2>
+  <h2 className="craving-text">What are you craving today?</h2>
+  <p className="craving-subtext">Find your favorite food and enjoy delicious meals.</p>
+</div>
+           {/* ================= FILTERS ================= */}
         <h2>Filters</h2>
 
         <div className="filters-bar">
@@ -180,7 +188,7 @@ function Home() {
           </div>
         )}
       </div>
-    </div>
+    
   );
 }
 
