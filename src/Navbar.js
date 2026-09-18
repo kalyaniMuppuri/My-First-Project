@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './index.css';
@@ -108,7 +107,17 @@ const Navbar = ({ searchQuery, setSearchQuery, foodItems = [] }) => {
                   onMouseDown={() => handleSelect(item.name)}
                   onMouseEnter={() => setActiveIndex(index)}
                 >
-                  {item.name}
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="suggestion-item-img"
+                  />
+                  <div className="suggestion-item-text">
+                    <span className="suggestion-item-name">{item.name}</span>
+                    {item.description && (
+                      <span className="suggestion-item-desc">{item.description}</span>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
@@ -144,4 +153,4 @@ const Navbar = ({ searchQuery, setSearchQuery, foodItems = [] }) => {
   );
 };
 
-export default Navbar
+export default Navbar;
