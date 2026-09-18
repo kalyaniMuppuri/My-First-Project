@@ -13,6 +13,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "json-server --watch foods.json --port 3002",
+    "auth-server": "json-server --watch users.json --port 3001",
+    "dev": "concurrently \"npm run auth-server\" \"npm run server\" \"npm start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

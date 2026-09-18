@@ -194,6 +194,30 @@ code {
   font-weight: 300;
 }
 
+.hero-tagline {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.hero-cta-btn {
+  margin-top: 30px;
+  padding: 14px 40px;
+  background-color: #8B9A6E;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-cta-btn:hover {
+  background-color: #7a8a5f;
+  transform: scale(1.05);
+}
+
 .content-section {
   padding: 80px 20px;
   background-color: #f5f5f5;
