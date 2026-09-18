@@ -1,0 +1,1 @@
+--watch/-w can be omitted, JSON Server 1+ watches for file changes by default

@@ -1,0 +1,44 @@
+{
+  "orders": [
+    {
+      "items": [
+        {
+          "id": "53",
+          "name": "Strawberry Shake",
+          "description": "Sweet creamy shake made with strawberries.",
+          "category": "Beverages",
+          "type": "Veg",
+          "price": 220,
+          "image": "/Images/strawberry-shake.jpg",
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "name": "Pongal",
+          "description": "Traditional rice and lentil dish seasoned with spices.",
+          "category": "Breakfast",
+          "type": "Veg",
+          "price": 130,
+          "image": "/Images/pongal.jpg",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 350,
+      "tax": 18,
+      "deliveryFee": 40,
+      "total": 408,
+      "delivery": {
+        "name": "john",
+        "phone": "2222222222",
+        "address": "22delhidelhi",
+        "city": "delhi",
+        "pincode": "222222"
+      },
+      "paymentMethod": "cod",
+      "status": "placed",
+      "createdAt": "2026-09-17T07:03:05.338Z",
+      "id": "CNGruv07uxA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

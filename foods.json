@@ -1,7 +1,7 @@
 {
   "foods": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Idli",
       "description": "Soft steamed rice cakes served with chutney and sambar.",
       "category": "Breakfast",
@@ -12,7 +12,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Masala Dosa",
       "description": "Crispy dosa filled with spiced potato masala.",
       "category": "Breakfast",
@@ -23,7 +23,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Plain Dosa",
       "description": "Crispy South Indian rice and lentil crepe.",
       "category": "Breakfast",
@@ -34,7 +34,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Vada",
       "description": "Crispy South Indian lentil fritters served with chutney.",
       "category": "Breakfast",
@@ -45,7 +45,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Pongal",
       "description": "Traditional rice and lentil dish seasoned with spices.",
       "category": "Breakfast",
@@ -56,7 +56,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Upma",
       "description": "Savory semolina breakfast cooked with vegetables and spices.",
       "category": "Breakfast",
@@ -67,7 +67,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Poori",
       "description": "Deep-fried fluffy wheat bread served with curry.",
       "category": "Breakfast",
@@ -78,7 +78,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Pesarattu",
       "description": "Green gram dosa served with chutney.",
       "category": "Breakfast",
@@ -89,7 +89,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Pav Bhaji",
       "description": "Spiced vegetable curry served with buttered pav.",
       "category": "Breakfast",
@@ -100,7 +100,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Bread Omelette",
       "description": "Egg omelette served with toasted bread.",
       "category": "Breakfast",
@@ -111,7 +111,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Chicken Biryani",
       "description": "Aromatic basmati rice cooked with spicy chicken.",
       "category": "Lunch",
@@ -122,7 +122,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Mutton Biryani",
       "description": "Fragrant rice cooked with tender mutton and spices.",
       "category": "Lunch",
@@ -133,7 +133,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Veg Biryani",
       "description": "Aromatic rice cooked with mixed vegetables and spices.",
       "category": "Lunch",
@@ -144,7 +144,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Paneer Biryani",
       "description": "Basmati rice cooked with paneer and aromatic spices.",
       "category": "Lunch",
@@ -155,7 +155,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Chicken Fried Rice",
       "description": "Fried rice tossed with chicken, vegetables and sauces.",
       "category": "Lunch",
@@ -166,7 +166,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Veg Fried Rice",
       "description": "Fried rice cooked with fresh vegetables and sauces.",
       "category": "Lunch",
@@ -177,7 +177,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Chicken Meals",
       "description": "Complete meal with rice, chicken curry and side dishes.",
       "category": "Lunch",
@@ -188,7 +188,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Veg Meals",
       "description": "Traditional vegetarian meal served with rice and curries.",
       "category": "Lunch",
@@ -199,7 +199,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Fish Rice",
       "description": "Rice served with flavorful fish curry.",
       "category": "Lunch",
@@ -210,7 +210,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Paneer Rice",
       "description": "Rice prepared with soft paneer and Indian spices.",
       "category": "Lunch",
@@ -221,7 +221,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Chicken Curry",
       "description": "Spicy Indian chicken curry cooked with aromatic spices.",
       "category": "Dinner",
@@ -232,7 +232,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Mutton Curry",
       "description": "Tender mutton cooked in a rich spicy gravy.",
       "category": "Dinner",
@@ -243,7 +243,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Paneer Butter Masala",
       "description": "Paneer cooked in creamy tomato and butter gravy.",
       "category": "Dinner",
@@ -254,7 +254,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Dal Tadka",
       "description": "Yellow lentils tempered with spices and herbs.",
       "category": "Dinner",
@@ -265,7 +265,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Butter Chicken",
       "description": "Chicken cooked in a creamy buttery tomato gravy.",
       "category": "Dinner",
@@ -276,7 +276,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Kadai Paneer",
       "description": "Paneer cooked with capsicum, onion and kadai spices.",
       "category": "Dinner",
@@ -287,7 +287,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Fish Curry",
       "description": "Fish cooked in a spicy traditional curry.",
       "category": "Dinner",
@@ -298,7 +298,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Chana Masala",
       "description": "Chickpeas cooked in a spicy tomato gravy.",
       "category": "Dinner",
@@ -309,7 +309,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Chicken Tikka Masala",
       "description": "Grilled chicken pieces cooked in creamy spicy gravy.",
       "category": "Dinner",
@@ -320,7 +320,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Mixed Vegetable Curry",
       "description": "Fresh mixed vegetables cooked in Indian spices.",
       "category": "Dinner",
@@ -331,7 +331,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "Chicken 65",
       "description": "Crispy spicy deep-fried chicken snack.",
       "category": "Snacks",
@@ -342,7 +342,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Chicken Wings",
       "description": "Crispy seasoned chicken wings.",
       "category": "Snacks",
@@ -353,7 +353,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Samosa",
       "description": "Crispy pastry filled with spiced potatoes.",
       "category": "Snacks",
@@ -364,7 +364,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Paneer 65",
       "description": "Crispy spicy fried paneer pieces.",
       "category": "Snacks",
@@ -375,7 +375,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Veg Spring Rolls",
       "description": "Crispy rolls filled with seasoned vegetables.",
       "category": "Snacks",
@@ -386,7 +386,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Chicken Nuggets",
       "description": "Crispy bite-sized chicken pieces.",
       "category": "Snacks",
@@ -397,7 +397,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "French Fries",
       "description": "Crispy golden potato fries.",
       "category": "Snacks",
@@ -408,7 +408,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "Gobi Manchurian",
       "description": "Crispy cauliflower tossed in spicy Manchurian sauce.",
       "category": "Snacks",
@@ -419,7 +419,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "Chicken Manchurian",
       "description": "Chicken pieces tossed in spicy Manchurian sauce.",
       "category": "Snacks",
@@ -430,7 +430,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Onion Pakoda",
       "description": "Crispy onion fritters made with gram flour.",
       "category": "Snacks",
@@ -441,7 +441,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "Gulab Jamun",
       "description": "Soft milk dumplings soaked in sweet syrup.",
       "category": "Desserts",
@@ -452,7 +452,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 42,
+      "id": "42",
       "name": "Rasmalai",
       "description": "Soft cheese dumplings soaked in sweet creamy milk.",
       "category": "Desserts",
@@ -463,7 +463,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 43,
+      "id": "43",
       "name": "Ice Cream",
       "description": "Creamy chilled dessert available in different flavors.",
       "category": "Desserts",
@@ -474,7 +474,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 44,
+      "id": "44",
       "name": "Chocolate Cake",
       "description": "Rich and soft chocolate flavored cake.",
       "category": "Desserts",
@@ -485,7 +485,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 45,
+      "id": "45",
       "name": "Brownie",
       "description": "Soft and rich chocolate brownie.",
       "category": "Desserts",
@@ -496,7 +496,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 46,
+      "id": "46",
       "name": "Jalebi",
       "description": "Crispy spiral sweet soaked in sugar syrup.",
       "category": "Desserts",
@@ -507,7 +507,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 47,
+      "id": "47",
       "name": "Kheer",
       "description": "Creamy rice pudding flavored with cardamom.",
       "category": "Desserts",
@@ -518,7 +518,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 48,
+      "id": "48",
       "name": "Rasgulla",
       "description": "Soft cottage cheese balls soaked in sugar syrup.",
       "category": "Desserts",
@@ -529,7 +529,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 49,
+      "id": "49",
       "name": "Carrot Halwa",
       "description": "Sweet grated carrot dessert cooked with milk and nuts.",
       "category": "Desserts",
@@ -540,7 +540,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 50,
+      "id": "50",
       "name": "Fruit Salad",
       "description": "Fresh seasonal fruits served as a healthy dessert.",
       "category": "Desserts",
@@ -551,7 +551,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 51,
+      "id": "51",
       "name": "Cold Coffee",
       "description": "Chilled creamy coffee drink.",
       "category": "Beverages",
@@ -562,7 +562,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 52,
+      "id": "52",
       "name": "Mango juice",
       "description": "Refreshing creamy shake made with ripe mangoes.",
       "category": "Beverages",
@@ -573,7 +573,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 53,
+      "id": "53",
       "name": "Strawberry Shake",
       "description": "Sweet creamy shake made with strawberries.",
       "category": "Beverages",
@@ -584,7 +584,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 54,
+      "id": "54",
       "name": "Lemon Juice",
       "description": "Refreshing lemon drink served chilled.",
       "category": "Beverages",
@@ -595,7 +595,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 55,
+      "id": "55",
       "name": "Fresh Lime Soda",
       "description": "Refreshing fizzy lime drink.",
       "category": "Beverages",
@@ -606,7 +606,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 56,
+      "id": "56",
       "name": "Masala Tea",
       "description": "Hot Indian tea prepared with aromatic spices.",
       "category": "Beverages",
@@ -617,7 +617,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 57,
+      "id": "57",
       "name": "Cappuccino",
       "description": "Creamy coffee topped with milk foam.",
       "category": "Beverages",
@@ -628,7 +628,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 58,
+      "id": "58",
       "name": "Oreo Shake",
       "description": "Creamy milkshake blended with Oreo cookies.",
       "category": "Beverages",
@@ -639,7 +639,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 59,
+      "id": "59",
       "name": "Watermelon Juice",
       "description": "Fresh and refreshing watermelon juice.",
       "category": "Beverages",
@@ -650,7 +650,7 @@
       "availability": "In Stock"
     },
     {
-      "id": 60,
+      "id": "60",
       "name": "Chocolate Milkshake",
       "description": "Rich creamy milkshake with chocolate flavor.",
       "category": "Beverages",
@@ -660,5 +660,6 @@
       "rating": 4.5,
       "availability": "In Stock"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

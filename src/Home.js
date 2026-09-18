@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
-import foodimage from "./background.jpg";
+import foodImage from "./background.jpg";
+import { addToCart } from "./cartService";
+
 
 const categories = ["All", "Breakfast", "Lunch", "Dinner", "Snacks", "Desserts", "Beverages"];
 const foodTypes = ["All", "Veg", "Non-Veg"];
@@ -65,53 +67,133 @@ function Home() {
     return stars;
   };
 
+  // ================= ADD TO CART =================
+  const handleAddToCart = (e, food) => {
+    e.stopPropagation();
+    addToCart(food);
+  };
+  // ================= GREETING  =================  
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return "Good Morning";
+    if (hour < 17) return "Good Afternoon";
+    return "Good Evening";
+  };
+
+
+
   return (
     <div className="home-container">
-      <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      {/* ================= NAVBAR ================= */}
+      <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} foodItems={foods} />
 
       <div
         className="hero-section"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(${foodimage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(${foodImage})`,
         }}
       >
         <h1 className="hero-title">ALGO FOODS</h1>
-        <p className="hero-subtitle">What are you craving today?</p>
-        <p className="hero-tagline">Discover the best food & drinks in Hyderabad</p>
-        <button
-          className="hero-cta-btn"
-          onClick={() => {
-            const el = document.querySelector(".food-categories");
-            if (el) el.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          Explore Menu
-        </button>
+        <p className="hero-subtitle">Discover the best food & drinks in Hyderabad</p>
       </div>
 
-      <div className="content-section">
-        {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
+      {/* ================= CONTENT ================= */}
+      <div className="greeting-box">
+  <h2 className="greeting-text">{getGreeting()}! 👋</h2>
+  <h2 className="craving-text">What are you craving today?</h2>
+  <p className="craving-subtext">Find your favorite food and enjoy delicious meals.</p>
+</div>
+           {/* ================= FILTERS ================= */}
+        <h2>Filters</h2>
 
-        <div className="food-categories">
-          <h2 className="section-title">Browse Categories</h2>
-          <div className="category-tabs">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className={`category-tab ${selectedCategory === cat ? "active" : ""}`}
-                onClick={() => setSelectedCategory(cat)}
-              >
-                {cat === "Breakfast" && "🌅 "}
-                {cat === "Lunch" && "🍽️ "}
-                {cat === "Dinner" && "🌙 "}
-                {cat === "Snacks" && "🍿 "}
-                {cat === "Desserts" && "🍰 "}
-                {cat === "Beverages" && "☕ "}
-                {cat}
-              </button>
+        <div className="filters-bar">
+          <div className="filter-group">
+            <label htmlFor="category-select">Category</label>
+            <select
+              id="category-select"
+              className="filter-select"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              {CATEGORIES.map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="filter-group">
+            <label htmlFor="type-select">Food Type</label>
+            <select
+              id="type-select"
+              className="filter-select"
+              value={type}
+              onChange={(e) => setType(e.target.value)}
+            >
+              {TYPES.map((t) => (
+                <option key={t} value={t}>
+                  {t}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="filter-group">
+            <label htmlFor="price-select">Price Range</label>
+            <select
+              id="price-select"
+              className="filter-select"
+              value={priceRange}
+              onChange={(e) => setPriceRange(e.target.value)}
+            >
+              <option value="All">All</option>
+              {PRICE_RANGES.slice(1).map((r) => (
+                <option key={r.value} value={r.value}>
+                  {r.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <button className="reset-btn" onClick={resetFilters}>
+            Reset Filters
+          </button>
+        </div>
+
+        {/* ================= FOOD LIST ================= */}
+        <h2>Food List</h2>
+
+        {loading ? (
+          <p>Loading food items...</p>
+        ) : filteredFoods.length === 0 ? (
+          <p>No food items found.</p>
+        ) : (
+          <div className="food-list">
+            {filteredFoods.map((food) => (
+              <div className="food-card" key={food.id}>
+                <img src={food.image} alt={food.name} className="food-card-image" />
+                <h2 className="food-card-title">{food.name}</h2>
+                <p className="food-card-description">{food.description}</p>
+                <p className="food-card-category">
+                  Category:{" "}
+                  <button onClick={() => setCategory(food.category)}>
+                    {food.category}
+                  </button>
+                </p>
+                <p>Type: {food.type}</p>
+                <p className="food-card-price">₹{food.price}</p>
+                <p>{food.availability}</p>
+                <button
+                  className="food-card-button"
+                  onClick={(e) => handleAddToCart(e, food)}
+                >
+                  Add to Cart
+                </button>
+              </div>
             ))}
           </div>
-        </div>
+        )}
 
         <div className="filter-section">
           <div className="filter-row">
@@ -255,7 +337,7 @@ function Home() {
           )}
         </div>
       </div>
-    </div>
+    
   );
 }
 

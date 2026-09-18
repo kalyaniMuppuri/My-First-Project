@@ -3,20 +3,13 @@
     {
       "username": "kalyani",
       "email": "kalyani@gmail.com",
-      "password": "123456",
-      "id": "wyIqblJwMkA"
-    },
+      "password": "123456"
+},
     {
-      "username": "harsha",
-      "email": "harshamodina@gmail.com",
-      "password": "1234567",
-      "id": "haAYxaH5RUg"
-    },
-    {
-      "username": "kalyani",
-      "email": "kalyanimuppuri@gmail.com",
+      "username": "vyshu",
+      "email": "vyshu@gmail.com",
       "password": "123456",
-      "id": "trR4fOojvyY"
+      "id": "QOxO0oSVvLA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
