@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import API_BASE from "../config/api";
+import "../styles/orders.css";
 
 function Orders() {
   const [orders, setOrders] = useState([]);
@@ -7,13 +10,12 @@ function Orders() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/orders")
+    fetch(API_BASE.ORDERS)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch orders");
         return res.json();
       })
       .then((data) => {
-        // Most recent order first
         const sorted = [...data].sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
@@ -35,7 +37,6 @@ function Orders() {
   };
 
   return (
-    
     <div className="orders-page">
       <Navbar searchQuery="" setSearchQuery={() => {}} />
       <div className="orders-content">
@@ -88,6 +89,7 @@ function Orders() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

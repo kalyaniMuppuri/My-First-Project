@@ -1,0 +1,127 @@
+.filter-section {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.filter-toggle-btn {
+  background: #8B9A6E;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.filter-toggle-btn:hover {
+  background: #7a8a5f;
+}
+
+.filters-panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filters-panel .filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin: 0;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  padding: 7px 16px;
+  border: 1.5px solid #ddd;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-btn:hover {
+  border-color: #8B9A6E;
+  color: #8B9A6E;
+}
+
+.filter-btn.active {
+  background: #8B9A6E;
+  border-color: #8B9A6E;
+  color: #fff;
+}
+
+.filter-btn.veg-btn.active {
+  background: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.filter-btn.nonveg-btn.active {
+  background: #c62828;
+  border-color: #c62828;
+}
+
+.type-indicator {
+  font-size: 10px;
+}
+
+.type-indicator.veg {
+  color: #2e7d32;
+}
+
+.type-indicator.nonveg {
+  color: #c62828;
+}
+
+.filter-btn.active .type-indicator {
+  color: #fff;
+}
+
+.clear-filters-btn {
+  align-self: flex-start;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #e0e0e0;
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 4px;
+}
+
+.clear-filters-btn:hover {
+  background: #d0d0d0;
+}

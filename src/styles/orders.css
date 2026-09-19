@@ -1,0 +1,129 @@
+.orders-page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.orders-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px 60px;
+}
+
+.orders-content h1 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+
+.orders-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink-muted);
+  background-color: var(--beige);
+  border-radius: 12px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  background: var(--beige);
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.order-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.order-id {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.order-date {
+  color: var(--ink-muted);
+  flex: 1;
+}
+
+.order-status {
+  text-transform: capitalize;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.order-status-placed {
+  background: #C9A227;
+}
+
+.order-status-delivered {
+  background: var(--sage);
+}
+
+.order-status-cancelled {
+  background: var(--error);
+}
+
+.order-items {
+  margin-bottom: 12px;
+}
+
+.order-item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--ink);
+  padding: 4px 0;
+}
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 10px;
+  border-top: 1px solid var(--gray);
+  gap: 12px;
+}
+
+.order-delivery {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+.order-total {
+  font-size: 17px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+@media (max-width: 600px) {
+  .order-card-header {
+    flex-wrap: wrap;
+  }
+
+  .order-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-total {
+    align-self: flex-end;
+  }
+}

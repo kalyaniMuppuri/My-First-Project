@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
-import { getCart, clearCart } from "./cartService";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { getCart, clearCart } from "../services/cartService";
+import API_BASE from "../config/api";
+import "../styles/checkout.css";
 
-const TAX_RATE = 0.05; // 5%
-const DELIVERY_FEE = 40; // flat ₹40
+const TAX_RATE = 0.05;
+const DELIVERY_FEE = 40;
 
 function Checkout() {
   const [cart] = useState(getCart());
@@ -57,7 +60,7 @@ function Checkout() {
 
     setPlacing(true);
     try {
-      const res = await fetch("http://localhost:3001/orders", {
+      const res = await fetch(API_BASE.ORDERS, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(order),
@@ -83,6 +86,7 @@ function Checkout() {
             <button onClick={() => navigate("/home")}>Browse Food</button>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -103,6 +107,7 @@ function Checkout() {
             <button onClick={() => navigate("/home")}>Back to Home</button>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -115,7 +120,6 @@ function Checkout() {
         <h1>Checkout</h1>
 
         <div className="checkout-layout">
-          {/* ============ Order Summary ============ */}
           <div className="checkout-summary">
             <h2>Order Summary</h2>
             {cart.map((item) => (
@@ -144,7 +148,6 @@ function Checkout() {
             </div>
           </div>
 
-          {/* ============ Delivery Details Form ============ */}
           <form className="checkout-form" onSubmit={handlePlaceOrder}>
             <h2>Delivery Details</h2>
 
@@ -233,6 +236,7 @@ function Checkout() {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

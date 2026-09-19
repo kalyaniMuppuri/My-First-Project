@@ -1,0 +1,65 @@
+.greeting-box {
+  background: #F7F2EB;
+  border: 1px solid #EAE2D6;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  margin: 40px auto 24px;
+  max-width: 900px;
+  position: relative;
+}
+
+.greeting-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8B9A6E, transparent);
+  border-radius: 16px 16px 0 0;
+}
+
+.greeting-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 26px;
+  background: #8B9A6E;
+  color: #fff;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  animation: badgeRotate 4s ease-in-out infinite;
+}
+
+@keyframes badgeRotate {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(10deg) scale(1.05); }
+  50% { transform: rotate(-5deg) scale(1); }
+  75% { transform: rotate(8deg) scale(1.02); }
+}
+
+.greeting-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #8B9A6E;
+  margin: 0 0 4px;
+  letter-spacing: 0.3px;
+}
+
+.craving-text {
+  font-size: 24px;
+  font-weight: 800;
+  color: #3F4A2E;
+  margin: 6px 0 6px;
+  letter-spacing: 0.5px;
+}
+
+.craving-subtext {
+  font-size: 14px;
+  color: #6B6455;
+  margin: 0;
+  font-weight: 400;
+}

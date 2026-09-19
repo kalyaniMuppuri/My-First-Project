@@ -1,4 +1,3 @@
-// cartService.js
 export const getCart = () => JSON.parse(localStorage.getItem("cart") || "[]");
 
 export const addToCart = (item) => {
@@ -14,7 +13,7 @@ export const addToCart = (item) => {
 };
 
 export const updateQuantity = (id, qty) => {
-  if (qty < 1) return; // guard: never let an item's quantity drop below 1
+  if (qty < 1) return;
   let cart = getCart();
   cart = cart.map(c => c.id === id ? { ...c, quantity: qty } : c);
   localStorage.setItem("cart", JSON.stringify(cart));

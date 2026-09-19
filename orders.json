@@ -38,6 +38,123 @@
       "status": "placed",
       "createdAt": "2026-09-17T07:03:05.338Z",
       "id": "CNGruv07uxA"
+    },
+    {
+      "items": [
+        {
+          "id": "1",
+          "name": "Idli",
+          "description": "Soft steamed rice cakes served with chutney and sambar.",
+          "category": "Breakfast",
+          "type": "Veg",
+          "price": 100,
+          "image": "/Images/idli.jpg",
+          "rating": 4.5,
+          "availability": "In Stock",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "deliveryFee": 40,
+      "total": 145,
+      "delivery": {
+        "name": "Harsha Modina",
+        "phone": "8328332892",
+        "address": "Chandanagar\npatancheuvu",
+        "city": "Hyderabad",
+        "pincode": "502032"
+      },
+      "paymentMethod": "cod",
+      "status": "placed",
+      "createdAt": "2026-09-18T14:24:02.508Z",
+      "id": "01I4flGDAHA"
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "name": "Chicken Biryani",
+          "description": "Aromatic basmati rice cooked with spicy chicken.",
+          "category": "Lunch",
+          "type": "Non-Veg",
+          "price": 300,
+          "image": "/Images/Chicken-biryani.jpg",
+          "rating": 4.9,
+          "availability": "In Stock",
+          "quantity": 1
+        },
+        {
+          "id": "27",
+          "name": "Fish Curry",
+          "description": "Fish cooked in a spicy traditional curry.",
+          "category": "Dinner",
+          "type": "Non-Veg",
+          "price": 300,
+          "image": "/Images/fish-curry.jpg",
+          "rating": 4.6,
+          "availability": "In Stock",
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Plain Dosa",
+          "description": "Crispy South Indian rice and lentil crepe.",
+          "category": "Breakfast",
+          "type": "Veg",
+          "price": 150,
+          "image": "/Images/plain-dosa.jpg",
+          "rating": 4.3,
+          "availability": "In Stock",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 750,
+      "tax": 38,
+      "deliveryFee": 40,
+      "total": 828,
+      "delivery": {
+        "name": "Harsha Modina",
+        "phone": "08328332892",
+        "address": "Chandanagar\npatancheuvu",
+        "city": "Hyderabad",
+        "pincode": "502032"
+      },
+      "paymentMethod": "cod",
+      "status": "placed",
+      "createdAt": "2026-09-18T15:42:23.842Z",
+      "id": "ukKl85oEfgE"
+    },
+    {
+      "items": [
+        {
+          "id": "2",
+          "name": "Masala Dosa",
+          "description": "Crispy dosa filled with spiced potato masala.",
+          "category": "Breakfast",
+          "type": "Veg",
+          "price": 120,
+          "image": "/Images/masala-dosa.jpg",
+          "rating": 4.7,
+          "availability": "In Stock",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 120,
+      "tax": 6,
+      "deliveryFee": 40,
+      "total": 166,
+      "delivery": {
+        "name": "Harsha Modina",
+        "phone": "08328332892",
+        "address": "Chandanagar\npatancheuvu",
+        "city": "Hyderabad",
+        "pincode": "502032"
+      },
+      "paymentMethod": "mock_online",
+      "status": "placed",
+      "createdAt": "2026-09-18T15:43:12.555Z",
+      "id": "nwYMHj4OCe8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

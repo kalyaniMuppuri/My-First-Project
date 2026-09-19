@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import {
   getCart,
   updateQuantity,
   removeFromCart,
   clearCart,
   getCartTotal,
-} from "./cartService";
+} from "../services/cartService";
+import "../styles/cart.css";
 
 function Cart() {
   const [cart, setCart] = useState(getCart());
@@ -21,7 +23,7 @@ function Cart() {
   };
 
   const handleDecrease = (item) => {
-    if (item.quantity <= 1) return; // use Remove to drop to zero
+    if (item.quantity <= 1) return;
     updateQuantity(item.id, item.quantity - 1);
     refresh();
   };
@@ -44,7 +46,6 @@ function Cart() {
 
   return (
     <div className="cart-page">
-      {/* Cart page doesn't use search, so pass no-op props */}
       <Navbar searchQuery="" setSearchQuery={() => {}} />
 
       <div className="cart-content">
@@ -53,7 +54,7 @@ function Cart() {
         {cart.length === 0 ? (
           <div className="cart-empty">
             <p>Your cart is empty.</p>
-            <button onClick={() => navigate("/checkout")}>Browse Food</button>
+            <button onClick={() => navigate("/home")}>Browse Food</button>
           </div>
         ) : (
           <>
@@ -117,6 +118,7 @@ function Cart() {
           </>
         )}
       </div>
+      <Footer />
     </div>
   );
 }
