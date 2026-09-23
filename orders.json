@@ -159,6 +159,7 @@
     {
       "items": [
         {
+<<<<<<< HEAD
           "id": "1",
           "name": "Idli",
           "description": "Soft steamed rice cakes served with chutney and sambar.",
@@ -190,6 +191,8 @@
     {
       "items": [
         {
+=======
+>>>>>>> c7ecd12d50f39b3795f2f73739c8ec23931ae0b5
           "id": "3",
           "name": "Plain Dosa",
           "description": "Crispy South Indian rice and lentil crepe.",
@@ -199,6 +202,7 @@
           "image": "/Images/plain-dosa.jpg",
           "rating": 4.3,
           "availability": "In Stock",
+<<<<<<< HEAD
           "quantity": 1
         }
       ],
@@ -217,6 +221,26 @@
       "status": "placed",
       "createdAt": "2026-09-20T14:42:23.738Z",
       "id": "KU6aqKd68Og"
+=======
+          "quantity": 2
+        }
+      ],
+      "subtotal": 300,
+      "tax": 15,
+      "deliveryFee": 40,
+      "total": 355,
+      "delivery": {
+        "name": "vyshu",
+        "phone": "2222222222",
+        "address": "21delhidelhi",
+        "city": "hyderabad",
+        "pincode": "222222"
+      },
+      "paymentMethod": "cod",
+      "status": "placed",
+      "createdAt": "2026-09-21T13:52:26.599Z",
+      "id": "x3AJAFXrEi4"
+>>>>>>> c7ecd12d50f39b3795f2f73739c8ec23931ae0b5
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
