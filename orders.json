@@ -155,6 +155,68 @@
       "status": "placed",
       "createdAt": "2026-09-18T15:43:12.555Z",
       "id": "nwYMHj4OCe8"
+    },
+    {
+      "items": [
+        {
+          "id": "1",
+          "name": "Idli",
+          "description": "Soft steamed rice cakes served with chutney and sambar.",
+          "category": "Breakfast",
+          "type": "Veg",
+          "price": 100,
+          "image": "/Images/idli.jpg",
+          "rating": 4.5,
+          "availability": "In Stock",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 100,
+      "tax": 5,
+      "deliveryFee": 40,
+      "total": 145,
+      "delivery": {
+        "name": "Harsha Modina",
+        "phone": "08328332892",
+        "address": "Chandanagar\npatancheuvu",
+        "city": "Hyderabad",
+        "pincode": "500070"
+      },
+      "paymentMethod": "cod",
+      "status": "placed",
+      "createdAt": "2026-09-20T14:15:40.073Z",
+      "id": "EF1lX6D74mk"
+    },
+    {
+      "items": [
+        {
+          "id": "3",
+          "name": "Plain Dosa",
+          "description": "Crispy South Indian rice and lentil crepe.",
+          "category": "Breakfast",
+          "type": "Veg",
+          "price": 150,
+          "image": "/Images/plain-dosa.jpg",
+          "rating": 4.3,
+          "availability": "In Stock",
+          "quantity": 1
+        }
+      ],
+      "subtotal": 150,
+      "tax": 8,
+      "deliveryFee": 40,
+      "total": 198,
+      "delivery": {
+        "name": "Harsha Modina",
+        "phone": "08328332892",
+        "address": "Chandanagar\npatancheuvu",
+        "city": "Hyderabad",
+        "pincode": "502032"
+      },
+      "paymentMethod": "cod",
+      "status": "placed",
+      "createdAt": "2026-09-20T14:42:23.738Z",
+      "id": "KU6aqKd68Og"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
