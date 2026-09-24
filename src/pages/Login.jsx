@@ -100,6 +100,7 @@ function Login() {
           </form>
 
           <p>Not a User? <Link to="/register">Register Now</Link></p>
+          <p style={{ marginTop: "8px" }}><Link to="/" style={{ fontSize: "14px", color: "#8B9A6E" }}>Forgot Password?</Link></p>
           {error && <p style={{ color: "red", fontSize: "16px" }}>{error}</p>}
           {success && <p style={{ color: "darkgreen", fontSize: "16px" }}>{success}</p>}
         </div>

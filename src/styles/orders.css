@@ -1,6 +1,6 @@
 .orders-page {
   min-height: 100vh;
-  background: var(--cream);
+  background-color: #ffffff;
 }
 
 .orders-content {
@@ -13,6 +13,25 @@
   font-size: 28px;
   margin-bottom: 24px;
   color: var(--ink);
+}
+
+.orders-refresh-btn {
+  display: block;
+  margin: 0 0 16px auto;
+  padding: 8px 18px;
+  background: var(--sage);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-family: inherit;
+}
+
+.orders-refresh-btn:hover {
+  opacity: 0.85;
 }
 
 .orders-empty {

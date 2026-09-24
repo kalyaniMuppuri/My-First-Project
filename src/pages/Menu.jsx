@@ -1,15 +1,17 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { addToCart } from "../services/cartService";
 import API_BASE from "../config/api";
+import { useDebounce } from "../hooks/useDebounce";
 import "../styles/filters.css";
 import "../styles/foodCard.css";
 import "../styles/skeleton.css";
 import "../styles/menu.css";
 
 const foodTypes = ["All", "Veg", "Non-Veg"];
+const categories = ["All", "Breakfast", "Lunch", "Dinner", "Snacks", "Desserts", "Beverages"];
 const priceRanges = [
   { label: "All", min: 0, max: Infinity },
   { label: "Under ₹100", min: 0, max: 100 },
@@ -28,11 +30,20 @@ function Menu() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedType, setSelectedType] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedPrice, setSelectedPrice] = useState(priceRanges[0]);
   const [selectedRating, setSelectedRating] = useState(ratingFilters[0]);
   const [showFilters, setShowFilters] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(searchParams.get("q") || "");
+  const debouncedSearch = useDebounce(searchQuery, 300);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const q = searchParams.get("q") || "";
+    setSearchQuery(q);
+  }, [searchParams.get("q")]);
 
   useEffect(() => {
     fetch(API_BASE.FOODS)
@@ -45,11 +56,25 @@ function Menu() {
       .finally(() => setLoading(false));
   }, []);
 
+  useEffect(() => {
+    const current = searchParams.get("q") || "";
+    if (debouncedSearch && debouncedSearch !== current) {
+      setSearchParams({ q: debouncedSearch }, { replace: true });
+    } else if (!debouncedSearch && current) {
+      setSearchParams({}, { replace: true });
+    }
+  }, [debouncedSearch, setSearchParams]);
+
   const filteredFoods = foods.filter((food) => {
     const matchesType = selectedType === "All" || food.type === selectedType;
+    const matchesCategory = selectedCategory === "All" || food.category === selectedCategory;
     const matchesPrice = food.price >= selectedPrice.min && food.price <= selectedPrice.max;
     const matchesRating = food.rating >= selectedRating.min;
-    return matchesType && matchesPrice && matchesRating;
+    const matchesSearch = debouncedSearch.trim() === "" ||
+      food.name.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
+      food.description.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
+      food.category.toLowerCase().includes(debouncedSearch.toLowerCase());
+    return matchesType && matchesCategory && matchesPrice && matchesRating && matchesSearch;
   });
 
   const renderStars = (rating) => {
@@ -66,13 +91,19 @@ function Menu() {
 
   const handleAddToCart = (e, food) => {
     e.stopPropagation();
-    addToCart(food);
+    if (food.stock !== undefined && food.stock === 0) return;
+    try {
+      addToCart(food);
+    } catch (error) {}
   };
 
   const clearFilters = () => {
     setSelectedType("All");
+    setSelectedCategory("All");
     setSelectedPrice(priceRanges[0]);
     setSelectedRating(ratingFilters[0]);
+    setSearchQuery("");
+    setSearchParams({}, { replace: true });
   };
 
   return (
@@ -91,6 +122,32 @@ function Menu() {
 
             {showFilters && (
               <div className="filters-panel">
+                <div className="filter-group">
+                  <label className="filter-label">Search</label>
+                  <input
+                    type="text"
+                    className="filter-search-input"
+                    placeholder="Search by name, description..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                </div>
+
+                <div className="filter-group">
+                  <label className="filter-label">Category</label>
+                  <div className="filter-options">
+                    {categories.map((cat) => (
+                      <button
+                        key={cat}
+                        className={`filter-btn ${selectedCategory === cat ? "active" : ""}`}
+                        onClick={() => setSelectedCategory(cat)}
+                      >
+                        {cat}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="filter-group">
                   <label className="filter-label">Food Type</label>
                   <div className="filter-options">
@@ -181,10 +238,13 @@ function Menu() {
                     onClick={() => navigate(`/food/${food.id}`)}
                   >
                     <div className="food-card-image-wrapper">
-                      <img src={food.image} alt={food.name} className="food-card-image" />
+                      <img src={food.image} alt={food.name} className="food-card-image" loading="lazy" />
                       <span className={`food-type-badge ${food.type === "Veg" ? "veg" : "nonveg"}`}>
                         {food.type === "Veg" ? "Veg" : "Non-Veg"}
                       </span>
+                      {food.stock !== undefined && food.stock === 0 && (
+                        <span className="food-out-of-stock-badge">Out of Stock</span>
+                      )}
                       <span className="food-availability-badge">{food.availability}</span>
                     </div>
                     <div className="food-card-body">
@@ -197,8 +257,12 @@ function Menu() {
                       </div>
                       <div className="food-card-footer">
                         <span className="food-card-price">₹{food.price}</span>
-                        <button className="food-card-button" onClick={(e) => handleAddToCart(e, food)}>
-                          Add to Cart
+                        <button 
+                          className="food-card-button" 
+                          onClick={(e) => handleAddToCart(e, food)}
+                          disabled={food.stock !== undefined && food.stock === 0}
+                        >
+                          {food.stock !== undefined && food.stock === 0 ? "Out of Stock" : "Add to Cart"}
                         </button>
                       </div>
                     </div>

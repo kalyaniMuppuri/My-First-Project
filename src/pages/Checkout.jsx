@@ -11,6 +11,7 @@ const DELIVERY_FEE = 40;
 
 function Checkout() {
   const [cart] = useState(getCart());
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -47,6 +48,7 @@ function Checkout() {
     }
 
     const order = {
+      userId: currentUser?.id || null,
       items: cart,
       subtotal,
       tax,
@@ -68,6 +70,7 @@ function Checkout() {
       if (!res.ok) throw new Error("Failed to save order");
 
       clearCart();
+      window.dispatchEvent(new Event("order-placed"));
       setPlaced(true);
     } catch (err) {
       alert("Couldn't place your order — is the mock server running? " + err.message);
@@ -79,7 +82,7 @@ function Checkout() {
   if (cart.length === 0 && !placed) {
     return (
       <div className="checkout-page">
-        <Navbar searchQuery="" setSearchQuery={() => {}} />
+        <Navbar />
         <div className="checkout-content">
           <div className="checkout-empty">
             <p>Your cart is empty — nothing to check out.</p>
@@ -94,7 +97,7 @@ function Checkout() {
   if (placed) {
     return (
       <div className="checkout-page">
-        <Navbar searchQuery="" setSearchQuery={() => {}} />
+        <Navbar />
         <div className="checkout-content">
           <div className="checkout-success">
             <div className="checkout-success-icon">✓</div>

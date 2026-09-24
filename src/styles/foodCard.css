@@ -157,6 +157,31 @@
   text-transform: capitalize;
 }
 
+.food-out-of-stock-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: #c62828;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.food-card-button:disabled {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.food-card-button:disabled:hover {
+  background-color: #ccc;
+}
+
 .food-card-body {
   padding: 4px 2px 0;
 }

@@ -2,7 +2,20 @@ export const getCart = () => JSON.parse(localStorage.getItem("cart") || "[]");
 
 export const addToCart = (item) => {
   const cart = getCart();
+  
+  // Check stock availability
+  if (item.stock !== undefined && item.stock <= 0) {
+    throw new Error(`${item.name} is out of stock`);
+  }
+  
   const exist = cart.find(c => c.id === item.id);
+  const currentQtyInCart = exist ? exist.quantity : 0;
+  
+  // Check if adding would exceed stock
+  if (item.stock !== undefined && currentQtyInCart + 1 > item.stock) {
+    throw new Error(`Only ${item.stock - currentQtyInCart} ${item.name}(s) left in stock`);
+  }
+  
   if (exist) {
     exist.quantity += 1;
   } else {
@@ -15,6 +28,13 @@ export const addToCart = (item) => {
 export const updateQuantity = (id, qty) => {
   if (qty < 1) return;
   let cart = getCart();
+  const item = cart.find(c => c.id === id);
+  
+  // Check stock availability if item has stock property
+  if (item && item.stock !== undefined && qty > item.stock) {
+    throw new Error(`Only ${item.stock} ${item.name}(s) available in stock`);
+  }
+  
   cart = cart.map(c => c.id === id ? { ...c, quantity: qty } : c);
   localStorage.setItem("cart", JSON.stringify(cart));
   window.dispatchEvent(new Event('cart-updated'));

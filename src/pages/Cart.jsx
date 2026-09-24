@@ -46,7 +46,7 @@ function Cart() {
 
   return (
     <div className="cart-page">
-      <Navbar searchQuery="" setSearchQuery={() => {}} />
+      <Navbar />
 
       <div className="cart-content">
         <h1>Your Cart</h1>
@@ -65,6 +65,7 @@ function Cart() {
                     src={item.image}
                     alt={item.name}
                     className="cart-item-image"
+                    loading="lazy"
                   />
 
                   <div className="cart-item-info">

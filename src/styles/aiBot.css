@@ -1,0 +1,334 @@
+.ai-suggestion-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.ai-suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.ai-suggestion-icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(139, 154, 110, 0.3);
+}
+
+.ai-suggestion-icon {
+  font-size: 1.5rem;
+}
+
+.ai-suggestion-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.ai-suggestion-subtitle {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+.ai-suggestion-input-wrap {
+  margin-bottom: 16px;
+}
+
+.ai-suggestion-input-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid var(--beige);
+  border-radius: 16px;
+  padding: 6px 8px 6px 18px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-suggestion-input-container:focus-within {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 4px rgba(139, 154, 110, 0.12);
+}
+
+.ai-suggestion-input-icon {
+  color: var(--ink-muted);
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.ai-suggestion-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--ink);
+  background: transparent;
+  padding: 12px 0;
+  font-family: inherit;
+}
+
+.ai-suggestion-input::placeholder {
+  color: #b0a99a;
+}
+
+.ai-suggestion-btn {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ai-suggestion-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(139, 154, 110, 0.4);
+}
+
+.ai-suggestion-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  align-items: center;
+}
+
+.ai-example-label {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.ai-example-tag {
+  background: var(--cream);
+  border: 1px solid var(--beige);
+  color: var(--ink-muted);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.ai-example-tag:hover {
+  background: var(--sage);
+  color: #fff;
+  border-color: var(--sage);
+}
+
+.ai-results-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 20px;
+  color: var(--ink-muted);
+}
+
+.ai-results-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--beige);
+  border-top-color: var(--sage);
+  border-radius: 50%;
+  animation: aiSpin 0.8s linear infinite;
+}
+
+@keyframes aiSpin {
+  to { transform: rotate(360deg); }
+}
+
+.ai-results-empty {
+  text-align: center;
+  padding: 48px 20px;
+  background: var(--cream);
+  border-radius: 16px;
+  border: 1px dashed var(--beige);
+}
+
+.ai-results-empty-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.ai-results-empty p {
+  color: var(--ink-muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.ai-results-header {
+  margin-bottom: 16px;
+}
+
+.ai-results-count {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+  background: var(--cream);
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.ai-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.ai-result-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--beige);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.ai-result-image-wrap {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.ai-result-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ai-result-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.ai-result-type.veg {
+  background: #2e7d32;
+}
+
+.ai-result-type.nonveg {
+  background: #c62828;
+}
+
+.ai-result-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ai-result-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.ai-result-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--sage);
+  margin: 0 0 10px;
+}
+
+.ai-result-reasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.ai-result-tag {
+  background: var(--cream);
+  color: var(--sage-dark);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 1px solid var(--beige);
+}
+
+.ai-result-reason {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin: 0 0 14px;
+  line-height: 1.4;
+  font-style: italic;
+  flex: 1;
+}
+
+.ai-result-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 0;
+  background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-family: inherit;
+}
+
+.ai-result-cart-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .ai-suggestion-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .ai-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-suggestion-examples {
+    justify-content: center;
+  }
+
+  .ai-suggestion-title {
+    font-size: 1.3rem;
+  }
+}

@@ -9,7 +9,15 @@
       "price": 100,
       "image": "/Images/idli.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 10,
+      "ingredients": [
+        "Rice",
+        "Urad Dal",
+        "Fenugreek Seeds",
+        "Salt"
+      ],
+      "preparationTime": "20 minutes"
     },
     {
       "id": "2",
@@ -20,7 +28,17 @@
       "price": 120,
       "image": "/Images/masala-dosa.jpg",
       "rating": 4.7,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 11,
+      "ingredients": [
+        "Rice",
+        "Urad Dal",
+        "Potatoes",
+        "Onions",
+        "Mustard Seeds",
+        "Curry Leaves"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "3",
@@ -31,7 +49,15 @@
       "price": 150,
       "image": "/Images/plain-dosa.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 12,
+      "ingredients": [
+        "Rice",
+        "Urad Dal",
+        "Oil",
+        "Salt"
+      ],
+      "preparationTime": "20 minutes"
     },
     {
       "id": "4",
@@ -42,7 +68,16 @@
       "price": 150,
       "image": "/Images/vada.jpg",
       "rating": 4.4,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 13,
+      "ingredients": [
+        "Urad Dal",
+        "Onions",
+        "Green Chilies",
+        "Curry Leaves",
+        "Oil"
+      ],
+      "preparationTime": "20 minutes"
     },
     {
       "id": "5",
@@ -53,7 +88,17 @@
       "price": 130,
       "image": "/Images/pongal.jpg",
       "rating": 4.2,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 14,
+      "ingredients": [
+        "Rice",
+        "Moong Dal",
+        "Black Pepper",
+        "Cumin",
+        "Ginger",
+        "Cashews"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "6",
@@ -63,8 +108,17 @@
       "type": "Veg",
       "price": 120,
       "image": "/Images/upma.jpg",
-      "rating": 4.0,
-      "availability": "In Stock"
+      "rating": 4,
+      "availability": "In Stock",
+      "stock": 15,
+      "ingredients": [
+        "Semolina",
+        "Onions",
+        "Mustard Seeds",
+        "Curry Leaves",
+        "Vegetables"
+      ],
+      "preparationTime": "15 minutes"
     },
     {
       "id": "7",
@@ -75,7 +129,14 @@
       "price": 140,
       "image": "/Images/poori.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 16,
+      "ingredients": [
+        "Wheat Flour",
+        "Salt",
+        "Oil"
+      ],
+      "preparationTime": "20 minutes"
     },
     {
       "id": "8",
@@ -86,7 +147,16 @@
       "price": 200,
       "image": "/Images/pesarattu.jpg",
       "rating": 4.6,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 17,
+      "ingredients": [
+        "Green Gram",
+        "Rice",
+        "Onions",
+        "Green Chilies",
+        "Ginger"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "9",
@@ -97,7 +167,17 @@
       "price": 170,
       "image": "/Images/pav-bhaji.jpg",
       "rating": 4.8,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 18,
+      "ingredients": [
+        "Potatoes",
+        "Tomatoes",
+        "Onions",
+        "Peas",
+        "Pav Bhaji Masala",
+        "Butter"
+      ],
+      "preparationTime": "30 minutes"
     },
     {
       "id": "10",
@@ -108,7 +188,17 @@
       "price": 160,
       "image": "/Images/bread-omelette.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 19,
+      "ingredients": [
+        "Eggs",
+        "Bread",
+        "Onions",
+        "Green Chilies",
+        "Salt",
+        "Pepper"
+      ],
+      "preparationTime": "10 minutes"
     },
     {
       "id": "11",
@@ -119,7 +209,17 @@
       "price": 300,
       "image": "/Images/Chicken-biryani.jpg",
       "rating": 4.9,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 20,
+      "ingredients": [
+        "Basmati Rice",
+        "Chicken",
+        "Onions",
+        "Yogurt",
+        "Spices",
+        "Saffron"
+      ],
+      "preparationTime": "45 minutes"
     },
     {
       "id": "12",
@@ -130,7 +230,17 @@
       "price": 400,
       "image": "/Images/mutton-biryani.jpg",
       "rating": 4.8,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 10,
+      "ingredients": [
+        "Basmati Rice",
+        "Mutton",
+        "Onions",
+        "Yogurt",
+        "Spices",
+        "Saffron"
+      ],
+      "preparationTime": "60 minutes"
     },
     {
       "id": "13",
@@ -141,7 +251,16 @@
       "price": 220,
       "image": "/Images/veg-biryani.jpg",
       "rating": 4.4,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 11,
+      "ingredients": [
+        "Basmati Rice",
+        "Mixed Vegetables",
+        "Onions",
+        "Yogurt",
+        "Spices"
+      ],
+      "preparationTime": "35 minutes"
     },
     {
       "id": "14",
@@ -152,7 +271,17 @@
       "price": 250,
       "image": "/Images/panner-biryani.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 12,
+      "ingredients": [
+        "Basmati Rice",
+        "Paneer",
+        "Onions",
+        "Yogurt",
+        "Spices",
+        "Saffron"
+      ],
+      "preparationTime": "35 minutes"
     },
     {
       "id": "15",
@@ -163,7 +292,16 @@
       "price": 240,
       "image": "/Images/Chicken-fried-rice.jpg",
       "rating": 4.6,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 13,
+      "ingredients": [
+        "Rice",
+        "Chicken",
+        "Vegetables",
+        "Soy Sauce",
+        "Garlic"
+      ],
+      "preparationTime": "20 minutes"
     },
     {
       "id": "16",
@@ -174,7 +312,16 @@
       "price": 180,
       "image": "/Images/veg-fried-rice.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 14,
+      "ingredients": [
+        "Rice",
+        "Mixed Vegetables",
+        "Soy Sauce",
+        "Garlic",
+        "Pepper"
+      ],
+      "preparationTime": "15 minutes"
     },
     {
       "id": "17",
@@ -185,7 +332,17 @@
       "price": 300,
       "image": "/Images/chicken-meals.jpg",
       "rating": 4.7,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 15,
+      "ingredients": [
+        "Rice",
+        "Chicken Curry",
+        "Sambar",
+        "Rasam",
+        "Vegetables",
+        "Papad"
+      ],
+      "preparationTime": "40 minutes"
     },
     {
       "id": "18",
@@ -196,7 +353,17 @@
       "price": 200,
       "image": "/Images/veg-meals.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 16,
+      "ingredients": [
+        "Rice",
+        "Sambar",
+        "Rasam",
+        "Kootu",
+        "PorIyAL",
+        "Papad"
+      ],
+      "preparationTime": "35 minutes"
     },
     {
       "id": "19",
@@ -207,7 +374,16 @@
       "price": 280,
       "image": "/Images/fish-rice.jpg",
       "rating": 4.4,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 17,
+      "ingredients": [
+        "Rice",
+        "Fish",
+        "Tomatoes",
+        "Tamarind",
+        "Spices"
+      ],
+      "preparationTime": "30 minutes"
     },
     {
       "id": "20",
@@ -218,7 +394,16 @@
       "price": 220,
       "image": "/Images/panner-rice.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 18,
+      "ingredients": [
+        "Rice",
+        "Paneer",
+        "Onions",
+        "Tomatoes",
+        "Spices"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "21",
@@ -229,7 +414,16 @@
       "price": 280,
       "image": "/Images/chicken-curry.jpg",
       "rating": 4.7,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 19,
+      "ingredients": [
+        "Chicken",
+        "Onions",
+        "Tomatoes",
+        "Ginger Garlic Paste",
+        "Spices"
+      ],
+      "preparationTime": "35 minutes"
     },
     {
       "id": "22",
@@ -240,7 +434,16 @@
       "price": 380,
       "image": "/Images/mutton-curry.jpg",
       "rating": 4.8,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 20,
+      "ingredients": [
+        "Mutton",
+        "Onions",
+        "Tomatoes",
+        "Ginger Garlic Paste",
+        "Spices"
+      ],
+      "preparationTime": "50 minutes"
     },
     {
       "id": "23",
@@ -251,7 +454,17 @@
       "price": 240,
       "image": "/Images/paneer-butter-masala.jpg",
       "rating": 4.9,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 10,
+      "ingredients": [
+        "Paneer",
+        "Tomatoes",
+        "Butter",
+        "Cream",
+        "Cashews",
+        "Spices"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "24",
@@ -262,7 +475,17 @@
       "price": 150,
       "image": "/Images/dal-tadka.jpg",
       "rating": 4.2,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 11,
+      "ingredients": [
+        "Toor Dal",
+        "Onions",
+        "Tomatoes",
+        "Mustard Seeds",
+        "Cumin",
+        "Garlic"
+      ],
+      "preparationTime": "20 minutes"
     },
     {
       "id": "25",
@@ -273,7 +496,17 @@
       "price": 320,
       "image": "/Images/butter-chicken.jpg",
       "rating": 4.8,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 12,
+      "ingredients": [
+        "Chicken",
+        "Tomatoes",
+        "Butter",
+        "Cream",
+        "Spices",
+        "Kasuri Methi"
+      ],
+      "preparationTime": "35 minutes"
     },
     {
       "id": "26",
@@ -284,7 +517,16 @@
       "price": 220,
       "image": "/Images/kadai-paneer.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 13,
+      "ingredients": [
+        "Paneer",
+        "Capsicum",
+        "Onions",
+        "Tomatoes",
+        "Kadai Masala"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "27",
@@ -295,7 +537,17 @@
       "price": 300,
       "image": "/Images/fish-curry.jpg",
       "rating": 4.6,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 14,
+      "ingredients": [
+        "Fish",
+        "Tomatoes",
+        "Onions",
+        "Tamarind",
+        "Spices",
+        "Coconut"
+      ],
+      "preparationTime": "30 minutes"
     },
     {
       "id": "28",
@@ -306,7 +558,16 @@
       "price": 160,
       "image": "/Images/chana-masala.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 15,
+      "ingredients": [
+        "Chickpeas",
+        "Onions",
+        "Tomatoes",
+        "Chana Masala",
+        "Ginger Garlic Paste"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "29",
@@ -317,7 +578,17 @@
       "price": 210,
       "image": "/Images/chicken-tikka-masala1.jpg",
       "rating": 4.7,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 16,
+      "ingredients": [
+        "Chicken",
+        "Yogurt",
+        "Tomatoes",
+        "Cream",
+        "Spices",
+        "Kasuri Methi"
+      ],
+      "preparationTime": "30 minutes"
     },
     {
       "id": "30",
@@ -328,7 +599,16 @@
       "price": 350,
       "image": "/Images/mixed-vegetable-curry.jpg",
       "rating": 4.4,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 17,
+      "ingredients": [
+        "Mixed Vegetables",
+        "Onions",
+        "Tomatoes",
+        "Spices",
+        "Cream"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "31",
@@ -339,7 +619,16 @@
       "price": 250,
       "image": "/Images/Chicken-65.jpg",
       "rating": 4.8,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 18,
+      "ingredients": [
+        "Chicken",
+        "Yogurt",
+        "Red Chili Powder",
+        "Corn Flour",
+        "Curry Leaves"
+      ],
+      "preparationTime": "20 minutes"
     },
     {
       "id": "32",
@@ -350,7 +639,16 @@
       "price": 280,
       "image": "/Images/chicken-wings.jpg",
       "rating": 4.6,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 19,
+      "ingredients": [
+        "Chicken Wings",
+        "Corn Flour",
+        "Spices",
+        "Garlic",
+        "Oil"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "33",
@@ -361,7 +659,17 @@
       "price": 100,
       "image": "/Images/samosa.jpg",
       "rating": 4.7,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 20,
+      "ingredients": [
+        "Potatoes",
+        "Peas",
+        "Cumin",
+        "Coriander",
+        "Flour",
+        "Oil"
+      ],
+      "preparationTime": "30 minutes"
     },
     {
       "id": "34",
@@ -372,7 +680,16 @@
       "price": 220,
       "image": "/Images/panner-65.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 10,
+      "ingredients": [
+        "Paneer",
+        "Corn Flour",
+        "Red Chili Powder",
+        "Ginger Garlic Paste",
+        "Curry Leaves"
+      ],
+      "preparationTime": "15 minutes"
     },
     {
       "id": "35",
@@ -383,7 +700,16 @@
       "price": 180,
       "image": "/Images/veg-spring-Rolls.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 11,
+      "ingredients": [
+        "Cabbage",
+        "Carrots",
+        "Spring Onions",
+        "Corn Flour",
+        "Soy Sauce"
+      ],
+      "preparationTime": "20 minutes"
     },
     {
       "id": "36",
@@ -394,7 +720,16 @@
       "price": 200,
       "image": "/Images/chicken-nuggets.jpg",
       "rating": 4.4,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 12,
+      "ingredients": [
+        "Chicken",
+        "Breadcrumbs",
+        "Corn Flour",
+        "Egg",
+        "Spices"
+      ],
+      "preparationTime": "20 minutes"
     },
     {
       "id": "37",
@@ -405,7 +740,15 @@
       "price": 150,
       "image": "/Images/french-fries.jpg",
       "rating": 4.2,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 13,
+      "ingredients": [
+        "Potatoes",
+        "Salt",
+        "Oil",
+        "Pepper"
+      ],
+      "preparationTime": "15 minutes"
     },
     {
       "id": "38",
@@ -416,7 +759,16 @@
       "price": 180,
       "image": "/Images/gobi-manchurian.jpg",
       "rating": 4.6,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 14,
+      "ingredients": [
+        "Cauliflower",
+        "Corn Flour",
+        "Soy Sauce",
+        "Garlic",
+        "Green Chilies"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "39",
@@ -427,7 +779,16 @@
       "price": 250,
       "image": "/Images/chicken-manchurian.jpg",
       "rating": 4.7,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 15,
+      "ingredients": [
+        "Chicken",
+        "Corn Flour",
+        "Soy Sauce",
+        "Garlic",
+        "Green Chilies"
+      ],
+      "preparationTime": "25 minutes"
     },
     {
       "id": "40",
@@ -438,7 +799,16 @@
       "price": 120,
       "image": "/Images/onion-pakoda.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 16,
+      "ingredients": [
+        "Onions",
+        "Gram Flour",
+        "Green Chilies",
+        "Spices",
+        "Oil"
+      ],
+      "preparationTime": "15 minutes"
     },
     {
       "id": "41",
@@ -449,7 +819,16 @@
       "price": 180,
       "image": "/Images/gulab-jamun.jpg",
       "rating": 4.8,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 17,
+      "ingredients": [
+        "Milk Powder",
+        "Flour",
+        "Cardamom",
+        "Sugar Syrup",
+        "Ghee"
+      ],
+      "preparationTime": "30 minutes"
     },
     {
       "id": "42",
@@ -460,7 +839,17 @@
       "price": 200,
       "image": "/Images/rasmalai.jpg",
       "rating": 4.7,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 18,
+      "ingredients": [
+        "Paneer",
+        "Sugar",
+        "Cardamom",
+        "Saffron",
+        "Almonds",
+        "Milk"
+      ],
+      "preparationTime": "40 minutes"
     },
     {
       "id": "43",
@@ -471,7 +860,16 @@
       "price": 250,
       "image": "/Images/ice-cream.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 19,
+      "ingredients": [
+        "Milk",
+        "Cream",
+        "Sugar",
+        "Vanilla",
+        "Stabilizers"
+      ],
+      "preparationTime": "10 minutes"
     },
     {
       "id": "44",
@@ -482,7 +880,17 @@
       "price": 250,
       "image": "/Images/chocolate-cake.jpg",
       "rating": 4.6,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 20,
+      "ingredients": [
+        "Flour",
+        "Cocoa Powder",
+        "Sugar",
+        "Eggs",
+        "Butter",
+        "Baking Powder"
+      ],
+      "preparationTime": "45 minutes"
     },
     {
       "id": "45",
@@ -493,7 +901,17 @@
       "price": 200,
       "image": "/Images/brownie.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 10,
+      "ingredients": [
+        "Chocolate",
+        "Butter",
+        "Sugar",
+        "Eggs",
+        "Flour",
+        "Cocoa Powder"
+      ],
+      "preparationTime": "35 minutes"
     },
     {
       "id": "46",
@@ -504,7 +922,16 @@
       "price": 120,
       "image": "/Images/jalebi.jpg",
       "rating": 4.4,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 11,
+      "ingredients": [
+        "Flour",
+        "Sugar",
+        "Saffron",
+        "Ghee",
+        "Yogurt"
+      ],
+      "preparationTime": "30 minutes"
     },
     {
       "id": "47",
@@ -515,7 +942,17 @@
       "price": 150,
       "image": "/Images/kheer.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 12,
+      "ingredients": [
+        "Rice",
+        "Milk",
+        "Sugar",
+        "Cardamom",
+        "Almonds",
+        "Pistachios"
+      ],
+      "preparationTime": "35 minutes"
     },
     {
       "id": "48",
@@ -526,7 +963,15 @@
       "price": 130,
       "image": "/Images/rasgulla.jpg",
       "rating": 4.4,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 13,
+      "ingredients": [
+        "Chenna",
+        "Sugar",
+        "Cardamom",
+        "Rose Water"
+      ],
+      "preparationTime": "30 minutes"
     },
     {
       "id": "49",
@@ -537,7 +982,17 @@
       "price": 160,
       "image": "/Images/carrot-halwa.jpg",
       "rating": 4.6,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 14,
+      "ingredients": [
+        "Carrots",
+        "Milk",
+        "Sugar",
+        "Ghee",
+        "Cardamom",
+        "Almonds"
+      ],
+      "preparationTime": "40 minutes"
     },
     {
       "id": "50",
@@ -548,7 +1003,17 @@
       "price": 180,
       "image": "/Images/fruit-salad.jpg",
       "rating": 4.2,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 15,
+      "ingredients": [
+        "Apple",
+        "Banana",
+        "Grapes",
+        "Pomegranate",
+        "Cream",
+        "Honey"
+      ],
+      "preparationTime": "10 minutes"
     },
     {
       "id": "51",
@@ -559,7 +1024,16 @@
       "price": 180,
       "image": "/Images/cold-coffee.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 16,
+      "ingredients": [
+        "Coffee",
+        "Milk",
+        "Sugar",
+        "Ice",
+        "Chocolate Syrup"
+      ],
+      "preparationTime": "5 minutes"
     },
     {
       "id": "52",
@@ -570,7 +1044,16 @@
       "price": 200,
       "image": "/Images/mango-juice.jpg",
       "rating": 4.6,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 17,
+      "ingredients": [
+        "Mango",
+        "Sugar",
+        "Milk",
+        "Ice",
+        "Cardamom"
+      ],
+      "preparationTime": "5 minutes"
     },
     {
       "id": "53",
@@ -581,7 +1064,16 @@
       "price": 220,
       "image": "/Images/strawberry-shake.jpg",
       "rating": 4.4,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 18,
+      "ingredients": [
+        "Strawberries",
+        "Milk",
+        "Sugar",
+        "Ice Cream",
+        "Whipped Cream"
+      ],
+      "preparationTime": "5 minutes"
     },
     {
       "id": "54",
@@ -592,7 +1084,16 @@
       "price": 120,
       "image": "/Images/lemon-juice.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 19,
+      "ingredients": [
+        "Lemon",
+        "Sugar",
+        "Salt",
+        "Water",
+        "Ice"
+      ],
+      "preparationTime": "5 minutes"
     },
     {
       "id": "55",
@@ -603,7 +1104,16 @@
       "price": 120,
       "image": "/Images/fresh-lime-soda.jpg",
       "rating": 4.2,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 20,
+      "ingredients": [
+        "Lemon",
+        "Soda",
+        "Sugar",
+        "Salt",
+        "Ice"
+      ],
+      "preparationTime": "5 minutes"
     },
     {
       "id": "56",
@@ -614,7 +1124,17 @@
       "price": 100,
       "image": "/Images/masala-tea.jpg",
       "rating": 4.7,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 10,
+      "ingredients": [
+        "Tea Leaves",
+        "Milk",
+        "Ginger",
+        "Cardamom",
+        "Cinnamon",
+        "Sugar"
+      ],
+      "preparationTime": "10 minutes"
     },
     {
       "id": "57",
@@ -625,7 +1145,15 @@
       "price": 250,
       "image": "/Images/cappuccino.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 11,
+      "ingredients": [
+        "Espresso",
+        "Milk",
+        "Milk Foam",
+        "Cocoa Powder"
+      ],
+      "preparationTime": "5 minutes"
     },
     {
       "id": "58",
@@ -636,7 +1164,16 @@
       "price": 140,
       "image": "/Images/oreo-shake.jpg",
       "rating": 4.6,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 12,
+      "ingredients": [
+        "Oreo Cookies",
+        "Milk",
+        "Sugar",
+        "Ice Cream",
+        "Chocolate Syrup"
+      ],
+      "preparationTime": "5 minutes"
     },
     {
       "id": "59",
@@ -647,7 +1184,16 @@
       "price": 250,
       "image": "/Images/watermelon-juice.jpg",
       "rating": 4.3,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 13,
+      "ingredients": [
+        "Watermelon",
+        "Sugar",
+        "Lemon",
+        "Ice",
+        "Mint"
+      ],
+      "preparationTime": "5 minutes"
     },
     {
       "id": "60",
@@ -658,7 +1204,53 @@
       "price": 200,
       "image": "/Images/chocolate-milkshake.jpg",
       "rating": 4.5,
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "stock": 14,
+      "ingredients": [
+        "Chocolate Syrup",
+        "Milk",
+        "Ice Cream",
+        "Sugar",
+        "Whipped Cream"
+      ],
+      "preparationTime": "5 minutes"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "All",
+      "description": "View all food items"
+    },
+    {
+      "id": 2,
+      "name": "Breakfast",
+      "description": "Morning tiffins and breakfast items"
+    },
+    {
+      "id": 3,
+      "name": "Lunch",
+      "description": "Afternoon lunch specials"
+    },
+    {
+      "id": 4,
+      "name": "Dinner",
+      "description": "Evening dinner delicacies"
+    },
+    {
+      "id": 5,
+      "name": "Snacks",
+      "description": "Quick bites and snacks"
+    },
+    {
+      "id": 6,
+      "name": "Desserts",
+      "description": "Sweet treats and desserts"
+    },
+    {
+      "id": 7,
+      "name": "Beverages",
+      "description": "Refreshing drinks and beverages"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

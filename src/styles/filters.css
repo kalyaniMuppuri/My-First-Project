@@ -125,3 +125,21 @@
 .clear-filters-btn:hover {
   background: #d0d0d0;
 }
+
+.filter-search-input {
+  padding: 9px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.filter-search-input:focus {
+  border-color: #8B9A6E;
+}
+
+.filter-search-input::placeholder {
+  color: #999;
+}

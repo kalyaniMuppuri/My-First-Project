@@ -1,14 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { getCartCount } from '../services/cartService';
+import API_BASE from '../config/api';
 import '../styles/navbar.css';
 import '../styles/searchSuggestions.css';
 
-const Navbar = ({ searchQuery, setSearchQuery }) => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [cartCount, setCartCount] = useState(getCartCount());
+  const [localQuery, setLocalQuery] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [foods, setFoods] = useState([]);
   const navigate = useNavigate();
+  const location = useLocation();
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const searchRef = useRef(null);
 
   useEffect(() => {
     const updateCount = () => setCartCount(getCartCount());
@@ -16,6 +23,65 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
     updateCount();
     return () => window.removeEventListener('cart-updated', updateCount);
   }, []);
+
+  useEffect(() => {
+    fetch(API_BASE.FOODS)
+      .then(res => res.json())
+      .then(data => setFoods(Array.isArray(data) ? data : []))
+      .catch(() => setFoods([]));
+  }, []);
+
+  useEffect(() => {
+    if (location.pathname === "/menu") {
+      const params = new URLSearchParams(location.search);
+      setLocalQuery(params.get("q") || "");
+    } else {
+      setLocalQuery("");
+      setShowSuggestions(false);
+    }
+  }, [location]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (searchRef.current && !searchRef.current.contains(e.target)) {
+        setShowSuggestions(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const query = localQuery.trim().toLowerCase();
+    if (query.length < 1) {
+      setSuggestions([]);
+      return;
+    }
+    const matched = foods.filter(f =>
+      f.name.toLowerCase().includes(query) ||
+      f.description.toLowerCase().includes(query) ||
+      f.category.toLowerCase().includes(query)
+    ).slice(0, 8);
+    setSuggestions(matched);
+  }, [localQuery, foods]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setShowSuggestions(false);
+    if (localQuery.trim()) {
+      navigate(`/menu?q=${encodeURIComponent(localQuery.trim())}`);
+    } else {
+      navigate("/menu");
+    }
+    setMenuOpen(false);
+  };
+
+  const handleSuggestionClick = (food) => {
+    setShowSuggestions(false);
+    setLocalQuery(food.name);
+    navigate(`/food/${food.id}`);
+    setMenuOpen(false);
+  };
 
   const handleLogout = () => {
     localStorage.removeItem("currentUser");
@@ -52,22 +118,54 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
           <Link to="/orders" className="nav-link" onClick={() => setMenuOpen(false)}>Orders</Link>
         </div>
 
-        <div className={`search-bar ${menuOpen ? "open" : ""}`}>
-          <input
-            type="text"
-            placeholder="Search food, category..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="search-input"
-          />
+        <div className={`search-bar-wrapper ${menuOpen ? "open" : ""}`} ref={searchRef}>
+          <form className="search-bar" onSubmit={handleSearch}>
+            <input
+              type="text"
+              placeholder="Search food, category..."
+              value={localQuery}
+              onChange={(e) => {
+                setLocalQuery(e.target.value);
+                setShowSuggestions(true);
+              }}
+              onFocus={() => setShowSuggestions(true)}
+              className="search-input"
+            />
+          </form>
+
+          {showSuggestions && localQuery.trim() && (
+            suggestions.length > 0 ? (
+              <ul className="search-suggestions">
+                {suggestions.map(food => (
+                  <li
+                    key={food.id}
+                    className="suggestion-item"
+                    onClick={() => handleSuggestionClick(food)}
+                  >
+                    <img src={food.image} alt={food.name} className="suggestion-item-img" />
+                    <div className="suggestion-item-text">
+                      <span className="suggestion-item-name">{food.name}</span>
+                      <span className="suggestion-item-desc">{food.description}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <ul className="search-suggestions">
+                <li className="suggestion-item suggestion-no-results">
+                  No foods found matching "{localQuery}"
+                </li>
+              </ul>
+            )
+          )}
         </div>
 
         <div className="nav-actions">
           <Link to="/cart" className="nav-cart">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -82,12 +180,11 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
             <span className="cart-badge">{cartCount}</span>
           </Link>
 
-          <div className="nav-profile">
+          <Link to="/profile" className="nav-profile">
             <div className="profile-avatar">
               {currentUser?.username?.charAt(0)?.toUpperCase() || "U"}
             </div>
-            <span className="profile-name">{currentUser?.username || "User"}</span>
-          </div>
+          </Link>
 
           <button onClick={handleLogout} className="nav-logout">
             Logout

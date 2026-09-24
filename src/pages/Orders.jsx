@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import API_BASE from "../config/api";
@@ -8,22 +8,48 @@ function Orders() {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [user] = useState(() => JSON.parse(localStorage.getItem("currentUser")));
 
-  useEffect(() => {
+  const fetchOrders = useCallback(() => {
+    setLoading(true);
+    setError(null);
     fetch(API_BASE.ORDERS)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch orders");
         return res.json();
       })
       .then((data) => {
-        const sorted = [...data].sort(
+        const userId = user?.id;
+        const userName = user?.username || "";
+        const filtered = data.filter((order) => {
+          if (userId && order.userId === userId) return true;
+          if (userName && order.delivery?.name?.toLowerCase() === userName.toLowerCase()) return true;
+          return false;
+        });
+        const sorted = [...filtered].sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
         setOrders(sorted);
       })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
-  }, []);
+  }, [user]);
+
+  useEffect(() => {
+    fetchOrders();
+  }, [fetchOrders]);
+
+  useEffect(() => {
+    const handleFocus = () => fetchOrders();
+    window.addEventListener("focus", handleFocus);
+    return () => window.removeEventListener("focus", handleFocus);
+  }, [fetchOrders]);
+
+  useEffect(() => {
+    const handleOrderPlaced = () => fetchOrders();
+    window.addEventListener("order-placed", handleOrderPlaced);
+    return () => window.removeEventListener("order-placed", handleOrderPlaced);
+  }, [fetchOrders]);
 
   const formatDate = (iso) => {
     if (!iso) return "";
@@ -38,7 +64,7 @@ function Orders() {
 
   return (
     <div className="orders-page">
-      <Navbar searchQuery="" setSearchQuery={() => {}} />
+      <Navbar />
       <div className="orders-content">
         <h1>Your Orders</h1>
 
@@ -48,11 +74,16 @@ function Orders() {
         {!loading && !error && orders.length === 0 && (
           <div className="orders-empty">
             <p>You haven't placed any orders yet.</p>
+            <button onClick={() => window.location.href = "/home"}>Browse Food</button>
           </div>
         )}
 
         {!loading && !error && orders.length > 0 && (
-          <div className="orders-list">
+          <>
+            <button className="orders-refresh-btn" onClick={fetchOrders}>
+              Refresh Orders
+            </button>
+            <div className="orders-list">
             {orders.map((order) => (
               <div className="order-card" key={order.id}>
                 <div className="order-card-header">
@@ -86,7 +117,8 @@ function Orders() {
                 </div>
               </div>
             ))}
-          </div>
+            </div>
+          </>
         )}
       </div>
       <Footer />
